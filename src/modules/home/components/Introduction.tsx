@@ -9,7 +9,7 @@ const Introduction = () => {
         <div className='space-y-4'>
           <ul className='ml-5 flex list-disc flex-col gap-1 text-neutral-700 dark:text-neutral-400 lg:flex-row lg:gap-10'>
             <li>
-              Based in Heredia, Costa Rica <span className='ml-1'>​🇨🇷</span>
+              Based in Heredia, Costa Rica <span className='ml-1'>🇨🇷</span>
             </li>
             <li>Software Engineer Full Stack at&nbsp;
               <a href="https://www.petsmart.com/" target="_blank">
