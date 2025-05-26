@@ -7,7 +7,7 @@ export const PROJECTS: ProjectItemProps[] = [
     description: 'A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.',
     image: '/images/projects/portfolio-site.png',
     link_demo: 'https://luisrojascr',
-    link_github: 'https://github.com/luisrojascr/aulianza.id',
+    link_github: 'https://github.com/luisrojascr/my-portfolio',
     stacks: '["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]',
     content: 'A comprehensive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and best practices.',
     is_show: true,

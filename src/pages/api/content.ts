@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const { category } = req.query;
-  const contentList = await loadMdxFiles(category as string);
+  const contentList = loadMdxFiles(category as string, '');
 
   const data = contentList.map((item) => ({
     id: item?.frontMatter?.id,

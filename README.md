@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>aulianza.id</h1>
+  <h1>luisrojascr Portfolio Site</h1>
   <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Firebase and Prisma with PostgreSQL</p>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/aulianza/aulianza.id)](https://github.com/aulianza/aulianza.id/stargazers)
@@ -10,8 +10,6 @@
 
 </div>
 <br />
-
-<img width="1359" alt="image" src="https://github.com/aulianza/aulianza.id/assets/15605885/e9665038-6e84-4c8e-a847-fb90138c0303">
 
 ## Introduction
 

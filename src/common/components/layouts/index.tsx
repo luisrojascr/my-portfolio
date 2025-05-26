@@ -11,8 +11,6 @@ import HeaderTop from './header/HeaderTop';
 import NowPlayingBar from '../elements/NowPlayingBar';
 import NowPlayingCard from '../elements/NowPlayingCard';
 
-// import TopBar from '../elements/TopBar';
-
 interface LayoutProps {
   children: ReactNode;
 }
@@ -31,12 +29,12 @@ const Layout = ({ children }: LayoutProps) => {
 
   const isFullPageHeader =
     pageName === 'blog' ||
-    router.pathname.startsWith('/blog/');
+    router.pathname.startsWith('/blog/') ||
+    router.pathname.startsWith('/learn/');
 
 
   return (
     <>
-      {/* <TopBar /> */}
       <div
         className={clsx(
           'mx-auto max-w-6xl',
