@@ -1,24 +1,36 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
 
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import About from '@/modules/about';
 
-const PAGE_TITLE = 'About';
-const PAGE_DESCRIPTION =
-  'Full-stack engineer turning bold ideas into fast, beautiful, and scalable web experiences.';
-
 const AboutPage: NextPage = () => {
+  const { t } = useTranslation('about');
+
   return (
     <>
-      <NextSeo title={`${PAGE_TITLE} - Luis Rojas`} />
+      <NextSeo title='About - Luis Rojas' />
       <Container data-aos='fade-up'>
-        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+        <PageHeading title='About' description={t('description')} />
         <About />
       </Container>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+        'about',
+      ])),
+    },
+  };
 };
 
 export default AboutPage;

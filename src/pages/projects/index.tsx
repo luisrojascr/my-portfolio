@@ -1,59 +1,47 @@
 import { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
 import { useState } from 'react';
 
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import { PROJECTS } from '@/common/constant/projects';
-import { ProjectItemProps } from '@/common/types/projects';
 import Projects from '@/modules/projects';
 
-interface ProjectsPageProps {
-  projects: ProjectItemProps[];
-}
+const ProjectsPage: NextPage = () => {
+  const [projects] = useState(PROJECTS);
+  const [hasMore] = useState(false);
+  const { t } = useTranslation('projects');
 
-const PAGE_TITLE = 'Projects';
-const PAGE_DESCRIPTION =
-  'Several projects that I have worked on, both private and open source.';
-
-const ProjectsPage: NextPage<ProjectsPageProps> = ({ projects }) => {
-  const [visibleProjects, setVisibleProjects] = useState(6);
-
-  const loadMore = () => setVisibleProjects((prev) => prev + 2);
-  const hasMore = visibleProjects < projects.length;
+  const loadMore = () => {
+    // Implementation for loading more projects if needed
+  };
 
   return (
     <>
-      <NextSeo title={`${PAGE_TITLE} - Luis Rojas`} />
+      <NextSeo title='Projects - Luis Rojas' />
       <Container data-aos='fade-up'>
-        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
-        <Projects
-          projects={projects.slice(0, visibleProjects)}
-          loadMore={loadMore}
-          hasMore={hasMore}
+        <PageHeading
+          title={t('projects.name')}
+          description={t('projects.showcase')}
         />
+        <Projects projects={projects} loadMore={loadMore} hasMore={hasMore} />
       </Container>
     </>
   );
 };
 
-export default ProjectsPage;
-
-export const getStaticProps: GetStaticProps = async () => {
-  // Sort projects: featured first, then by updated_at descending
-  const sortedProjects = PROJECTS.sort((a, b) => {
-    // First sort by is_featured (featured projects first)
-    if (a.is_featured !== b.is_featured) {
-      return b.is_featured ? 1 : -1;
-    }
-    // Then sort by updated_at (newest first)
-    return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
-  });
-
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      projects: JSON.parse(JSON.stringify(sortedProjects)),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+        'projects',
+      ])),
     },
-    revalidate: 1,
   };
 };
+
+export default ProjectsPage;

@@ -1,15 +1,17 @@
+import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 
 import useIsMobile from '@/common/hooks/useIsMobile';
 
 import Breakline from '../../elements/Breakline';
-import SearchBox from '../../elements/SearchBox';
+import LanguageSwitcher from '../../elements/LanguageSwitcher';
 import ThemeSwitcher from '../../elements/ThemeSwitcher';
 import Navigation from '../../sidebar/Navigation';
 import Profile from '../../sidebar/Profile';
 
 const Sidebar = () => {
   const isMobile = useIsMobile();
+  const { t } = useTranslation('common');
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,7 +44,13 @@ const Sidebar = () => {
           <Breakline className='mx-1' />
           <div className='space-y-2.5 px-1'>
             <div className='px-3'>
-              <span className='text-sm text-neutral-600'>Theme</span>
+              <span className='text-sm text-neutral-600'>{t('language')}</span>
+            </div>
+            <LanguageSwitcher />
+          </div>
+          <div className='space-y-2.5 px-1'>
+            <div className='px-3'>
+              <span className='text-sm text-neutral-600'>{t('theme')}</span>
             </div>
             <ThemeSwitcher />
           </div>

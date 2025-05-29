@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "social": {
+    "email": "Email",
+    "linkedin": "Linkedin",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "github": "Github"
+  }
+}

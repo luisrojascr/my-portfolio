@@ -1,0 +1,43 @@
+{
+  "projects": {
+    "name": "Proyectos",
+    "list": [
+      {
+        "title": "Sitio Web de Portafolio Personal",
+        "description": "Un portafolio moderno y responsivo construido con Next.js, TypeScript y Tailwind CSS. Incluye modo oscuro, animaciones y rendimiento optimizado.",
+        "content": "Un sitio web de portafolio integral que muestra proyectos, habilidades y experiencia. Construido con tecnologías web modernas y mejores prácticas."
+      },
+      {
+        "title": "Plataforma E-Commerce ISSA",
+        "description": "ISSA Online es el sitio público de e-learning y e-commerce de la Asociación Internacional de Ciencias del Deporte.",
+        "content": "Un front-end de React/Next.js estilizado con Chakra UI, tipado en TypeScript y construido con TDD. Las páginas se sirven a través de un servidor HTTP Apache que transfiere activos al CDN de Akamai para caché global en el borde."
+      },
+      {
+        "title": "Antimatter",
+        "description": "Antimatter (antimatter.io) está desarrollando un nuevo producto para ayudar a las personas a gestionar de forma segura los datos de clientes mientras crean funciones de IA usando LLMs.",
+        "content": "Este producto consiste principalmente en bibliotecas y servicios que las empresas SaaS pueden usar para clasificar, encriptar y hacer cumplir políticas de gobernanza de datos para datos de clientes."
+      },
+      {
+        "title": "Molekule",
+        "description": "El panel de administración para Molekule es una aplicación web sofisticada que desarrollé usando Angular y Ngx-admin",
+        "content": "El panel de administración para Molekule es una aplicación web sofisticada que desarrollé usando Angular y Ngx-admin. Cuenta con autenticación robusta de usuarios gestionada a través de AWS Cognito. Para una experiencia práctica, puedes configurar una cuenta de prueba o contactarme para acceso a una cuenta demo."
+      },
+      {
+        "title": "App Minerva",
+        "description": "Desarrollé una aplicación web enfocada en datos para un cliente llamado Minerva Data",
+        "content": "Diseñada para ofrecer insights de datos integrales específicamente para empresas costarricenses. Originalmente alojada en Heroku, este proyecto, aunque ya no se mantiene activamente, mostró una plataforma robusta para análisis y visualización de datos."
+      },
+      {
+        "title": "Vanity Spa",
+        "description": "Esta aplicación, específicamente diseñada para el spa de mi esposa, optimiza el proceso de reservas.",
+        "content": "Integra eficientemente datos de la API de Setmore, optimizando la programación y gestión de citas. Es un sitio web impulsado por WordPress para el spa de mi esposa. Modifiqué algunas características del tema original de WordPress."
+      },
+      {
+        "title": "Rumbo Económico",
+        "description": "Sitio WordPress para Rumbo Económico, un portal de noticias costarricense.",
+        "content": "Una herramienta de análisis poderosa para profesionales de redes sociales para rastrear rendimiento y optimizar su estrategia de contenido."
+      }
+    ],
+    "showcase": "Muestra de mis trabajos en desarrollo web."
+  }
+}

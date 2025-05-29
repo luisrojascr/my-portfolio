@@ -1,4 +1,4 @@
-import { BsFillBootstrapFill, BsRobot } from 'react-icons/bs';
+import { BsRobot } from 'react-icons/bs';
 import {
   SiAngular,
   SiApollographql,
@@ -11,20 +11,18 @@ import {
   SiMui,
   SiNextdotjs,
   SiNodedotjs,
-  SiNuxtdotjs,
   SiNx,
   SiPostgresql,
   SiPrisma,
   SiPwa,
-  SiReact,
+SiPython,  SiReact,
   SiRedux,
   SiStorybook,
   SiStyledcomponents,
   SiSupabase,
-  SiTailwindcss,
+  SiSvelte,  SiTailwindcss,
   SiTypescript,
   SiVite,
-  SiVuedotjs,
   SiWebpack,
   SiWordpress} from 'react-icons/si';
 
@@ -40,9 +38,6 @@ export const STACKS: stacksProps = {
   'Next.js': <SiNextdotjs size={iconSize} />,
   'React.js': <SiReact size={iconSize} className='text-sky-500' />,
   TailwindCSS: <SiTailwindcss size={iconSize} className='text-cyan-300' />,
-  Bootstrap: (
-    <BsFillBootstrapFill size={iconSize} className='text-purple-500' />
-  ),
   GraphQL: <SiGraphql size={iconSize} className='text-pink-600' />,
   Apollo: <SiApollographql size={iconSize} />,
   WordPress: <SiWordpress size={iconSize} />,
@@ -54,8 +49,7 @@ export const STACKS: stacksProps = {
     <BsRobot size={iconSize} className='text-rose-500' />
   ),
   Angular: <SiAngular size={iconSize} className='text-red-500' />,
-  'Vue.js': <SiVuedotjs size={iconSize} className='text-green-500' />,
-  'Nuxt.js': <SiNuxtdotjs size={iconSize} className='text-green-400' />,
+  Svelte: <SiSvelte size={iconSize} />,
   'Node.js': <SiNodedotjs size={iconSize} className='text-green-600' />,
   Redux: <SiRedux size={iconSize} className='text-purple-500' />,
   Webpack: <SiWebpack size={iconSize} className='text-blue-500' />,
@@ -70,4 +64,5 @@ export const STACKS: stacksProps = {
   Nx: <SiNx size={iconSize} />,
   PostgreSQL: <SiPostgresql size={iconSize} />,
   Supabase: <SiSupabase size={iconSize} className='text-blue-300'  />,
+  Python: <SiPython size={iconSize} />
 };

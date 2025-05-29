@@ -1,0 +1,15 @@
+{
+  "description": "Una breve historia sobre mi",
+  "content": "Hola, soy Luis Rojas—un ingeniero full-stack costarricense con más de 10 años convirtiendo ideas ambiciosas de productos en experiencias web rápidas, elegantes y escalables. Me formé transformando PSDs en sitios pixel-perfect y ahora lidero proyectos de React/Next.js, TypeScript y Node que sirven a cientos de miles de usuarios. En el camino he:",
+  "achievements": [
+    "**Modernizado plataformas legacy**—migrando grandes bases de código de componentes de clase de React a Next.js + GraphQL para ISSA, reduciendo tiempos de carga y desbloqueando nuevas funcionalidades.",
+    "**Elevado flujos de trabajo de usuarios**—rediseñé herramientas de RRHH y despacho que aumentaron la eficiencia en un 20% en Associa y mejoraron la velocidad de reclutamiento.",
+    "**Construido productos impulsados por IA**—desde una app de diseño de interiores que analiza fotos de habitaciones con APIs de OpenAI y Vision hasta dashboards basados en datos para líderes de e-commerce."
+  ],
+  "closing": [
+    "Prospero en equipos ágiles donde el código limpio, la UX reflexiva y la comunicación clara impulsan la hoja de ruta. Ya sea arquitectando APIs REST/GraphQL en Node.js o puliendo el último píxel en React, mi objetivo es el mismo: entregar software delicioso que escale.",
+    "En mi carrera, he trabajado para una amplia gama de empresas, desde grandes corporaciones hasta startups innovadoras.",
+    "Colaboremos y construyamos algo extraordinario juntos."
+  ],
+  "regards": "Saludos"
+}

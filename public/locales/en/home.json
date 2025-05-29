@@ -1,0 +1,15 @@
+{
+  "introduction": {
+    "greeting": "Hi, I'm Luis Rojas",
+    "location": "Based in Heredia, Costa Rica",
+    "position": "Software Engineer Full Stack at",
+    "company": "PetSmart",
+    "bio": "Full-stack engineer with over 10 years of experience leading front-end work in React and Next.js. I combine design sensitivity with TypeScript, Node, and Python to create fast, scalable, pixel-perfect web applications while guiding cross-functional teams toward clean code and enjoyable user experiences.",
+    "toolsIveUsed": "Tools that I have used",
+    "whatIveBeenWorkingOn": "What I've been working on",
+    "services": "I assist brands, companies, institutions, and startups in creating exceptional digital experiences for their businesses through strategic development services.",
+    "workTogether": "Lets work together!",
+    "openForFreelance": "I'm open for freelance projects, feel free to email me to see how can we collaborate.",
+    "contactMe": "Contact me"
+  }
+}

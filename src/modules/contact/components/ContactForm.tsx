@@ -1,5 +1,6 @@
 import axios from 'axios';
 import clsx from 'clsx';
+import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import { FiClock as ClockIcon } from 'react-icons/fi';
 
@@ -18,6 +19,7 @@ const formInitialState: FormDataProps = {
 };
 
 const ContactForm = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState<FormDataProps>(formInitialState);
 
   const [formErrors, setFormErrors] = useState<Partial<FormDataProps>>({});
@@ -68,7 +70,7 @@ const ContactForm = () => {
           <input
             className='w-full rounded-md border border-neutral-200 px-3 py-2 focus:outline-none dark:border-neutral-700'
             type='text'
-            placeholder='Name*'
+            placeholder={t('form.name')}
             name='name'
             value={formData.name}
             onChange={handleChange}
@@ -87,7 +89,7 @@ const ContactForm = () => {
         <textarea
           className='w-full rounded-md border border-neutral-200 px-3 py-2 focus:outline-none dark:border-neutral-700'
           rows={5}
-          placeholder='Message*'
+          placeholder={t('form.message')}
           name='message'
           value={formData.message}
           onChange={handleChange}
@@ -102,14 +104,14 @@ const ContactForm = () => {
           data-umami-event='Send Contact Message'
           disabled={isSubmitDisabled}
         >
-          {isLoading ? 'Sending Message...' : 'Send Message'}
+          {isLoading ? t('form.sending') : t('form.send')}
         </Button>
       </div>
 
       <div className='my-5 flex items-center gap-2 dark:text-neutral-400'>
         <ClockIcon />
         <div className='text-sm'>
-          <span className='font-medium'>Avg. response:</span> 1-2 Hours (Time zone CST/GMT-6)
+          <span className='font-medium'>{ t('info.response')}:</span> 1-2 Hours (Time zone CST/GMT-6)
         </div>
       </div>
     </form>

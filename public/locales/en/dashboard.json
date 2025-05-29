@@ -1,0 +1,27 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Personal Dashboard",
+  "description": "A collection of my personal stats and activities",
+  "sections": {
+    "overview": "Overview",
+    "coding": "Coding Activity",
+    "github": "GitHub Stats",
+    "spotify": "Currently Playing",
+    "blog": "Blog Stats",
+    "projects": "Projects Overview"
+  },
+  "stats": {
+    "totalProjects": "Total Projects",
+    "totalCommits": "Total Commits",
+    "totalStars": "Total Stars",
+    "totalForks": "Total Forks",
+    "languages": "Top Languages",
+    "activity": "Recent Activity"
+  },
+  "time": {
+    "today": "Today",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "allTime": "All Time"
+  }
+}

@@ -2,6 +2,7 @@ import AOS from 'aos';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { SessionProvider } from 'next-auth/react';
+import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 import { useEffect } from 'react';
@@ -49,7 +50,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
       </style>
       <DefaultSeo {...defaultSEOConfig} />
       <SessionProvider session={session}>
-        <ThemeProvider attribute='class' defaultTheme='dark'>
+        <ThemeProvider attribute='class' defaultTheme='light'>
           <CommandPaletteProvider>
             <Layout>
               <CommandPalette />
@@ -63,4 +64,4 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
   );
 };
 
-export default App;
+export default appWithTranslation(App);

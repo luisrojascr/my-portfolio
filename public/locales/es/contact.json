@@ -1,0 +1,30 @@
+{
+  "title": "Contacto",
+  "subtitle": "Ponte en contacto",
+  "workTogether": "¡Trabajemos juntos!",
+  "description": "¡No dudes en contactarme si tienes alguna pregunta, quieres discutir un proyecto, o simplemente quieres saludar!",
+  "form": {
+    "name": "Nombre*",
+    "email": "Correo electrónico*",
+    "message": "Mensaje*",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado exitosamente!",
+    "error": "Error al enviar el mensaje. Por favor intenta de nuevo.",
+    "nameRequired": "El nombre es requerido",
+    "emailRequired": "El correo electrónico es requerido",
+    "emailInvalid": "Por favor ingresa un correo válido",
+    "messageRequired": "El mensaje es requerido"
+  },
+  "info": {
+    "email": "Correo electrónico",
+    "location": "Ubicación",
+    "availability": "Disponibilidad",
+    "response": "Tiempo de Respuesta"
+  },
+  "findMeSocialMedia": "Encuéntrame",
+  "bookCall": "Agenda una llamada",
+  "session": "Sesión 1 a 1",
+  "findTime": "Busca el mejor momento para que conversemos",
+  "sendMessage": "O envíame un mensaje"
+}

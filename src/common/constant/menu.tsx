@@ -9,9 +9,9 @@ import {
 import {
   FiCoffee as ProjectIcon,
   FiCpu as DashboardIcon,
-  FiPieChart as AnalyticsIcon,
+  // FiPieChart as AnalyticsIcon,
   FiPocket as HomeIcon,
-  FiRss as BlogIcon,
+  // FiRss as BlogIcon,
   FiUser as ProfileIcon,
 } from 'react-icons/fi';
 

@@ -1,46 +1,33 @@
 import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
-import { SWRConfig } from 'swr';
 
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import Dashboard from '@/modules/dashboard';
-import { getGithubUser } from '@/services/github';
 
-interface DashboardPageProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  fallback: any;
-}
-
-const PAGE_TITLE = 'Dashboard';
-const PAGE_DESCRIPTION =
-  'This is my personal dashboard, built with Next.js API routes deployed as serverless functions.';
-
-const DashboardPage: NextPage<DashboardPageProps> = ({ fallback }) => {
+const DashboardPage: NextPage = () => {
   return (
-    <SWRConfig value={{ fallback }}>
-      <NextSeo title={`${PAGE_TITLE} - Luis Rojas`} />
+    <>
+      <NextSeo title='Dashboard - Luis Rojas' />
       <Container data-aos='fade-up'>
-        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+        <PageHeading title='Dashboard' description='Personal dashboard' />
         <Dashboard />
       </Container>
-    </SWRConfig>
+    </>
   );
 };
 
-export default DashboardPage;
-
-export const getStaticProps: GetStaticProps = async () => {
-  // const readStats = await getReadStats();
-  const githubUserPersonal = await getGithubUser('personal');
-
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      fallback: {
-        // '/api/read-stats': readStats.data,
-        '/api/github?type=personal': githubUserPersonal?.data,
-      },
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+        'dashboard',
+      ])),
     },
-    revalidate: 1,
   };
 };
+
+export default DashboardPage;

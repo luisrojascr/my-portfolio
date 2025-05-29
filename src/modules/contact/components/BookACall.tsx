@@ -1,10 +1,13 @@
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import { FiCalendar, FiClock, FiVideo } from 'react-icons/fi';
 
 const BookACall = () => {
+  const { t } = useTranslation('contact');
+
   return (
     <div className='space-y-5 pb-2'>
-      <h3 className='text-lg font-medium'>Book a Call</h3>
+      <h3 className='text-lg font-medium'>{t('bookCall')}</h3>
       <Link
         href='https://cal.com/luisrojascr/30min'
         target='_blank'
@@ -14,10 +17,10 @@ const BookACall = () => {
         <div className='flex items-start justify-between gap-5'>
           <div className='space-y-1'>
             <div className='flex items-center gap-2 text-base font-medium md:text-lg'>
-              <span>1 on 1 Chit-chat Session</span>
+              <span>{t('session')}</span>
             </div>
             <p className='text-sm dark:text-neutral-300 md:text-base'>
-              Let’s find some time to talk about anything
+              {t('findTime')}
             </p>
           </div>
           <div className='rounded-full border-2 border-neutral-400 p-3 dark:border-teal-600 dark:text-neutral-100'>

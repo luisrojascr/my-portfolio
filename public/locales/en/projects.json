@@ -1,0 +1,43 @@
+{
+  "projects": {
+    "name": "Projects",
+    "list": [
+      {
+        "title": "Personal Portfolio Website",
+        "description": "A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.",
+        "content": "A comprehensive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and best practices."
+      },
+      {
+        "title": "ISSA E-Commerce Platform",
+        "description": "ISSA Online is the public-facing e-learning and e-commerce site of the International Sports Sciences Association.",
+        "content": "A React/Next.js front-end styled with Chakra UI, typed in TypeScript and built with TDD. Pages are served through an Apache HTTP Server that hands off assets to the Akamai CDN for global edge caching."
+      },
+      {
+        "title": "Antimatter",
+        "description": "Antimatter (antimatter.io) is developing a new product to help people securely manage customer data while creating AI features using LLMs.",
+        "content": "This product consists primarily of libraries and services that SaaS companies can use to classify, encrypt, and enforce data governance policies for customer data."
+      },
+      {
+        "title": "Molekule",
+        "description": "The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin",
+        "content": "The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin. It features robust user authentication managed through AWS Cognito. For a hands-on experience, you're welcome to set up a test account or contact me for access to a demo account."
+      },
+      {
+        "title": "Minerva App",
+        "description": "I developed a data-focused web application for a client named Minerva Data",
+        "content": "Tailored to offer comprehensive data insights specifically for Costa Rican companies. Originally hosted on Heroku, this project, while no longer actively maintained, showcased a robust platform for data analysis and visualization."
+      },
+      {
+        "title": "Vanity Spa",
+        "description": "This application, specifically designed for my wife's spa, streamlines the booking process.",
+        "content": "It efficiently integrates data from the Setmore API, optimizing appointment scheduling and management. It's WordPress powered website for my wife's spa. I modified some features of the original WordPress theme."
+      },
+      {
+        "title": "Rumbo Económico",
+        "description": "WordPress site for Rumbo Económico, a Costa Rican news portal.",
+        "content": "A powerful analytics tool for social media professionals to track performance and optimize their content strategy."
+      }
+    ],
+    "showcase": "Showcase of my works on frontend development."
+  }
+}

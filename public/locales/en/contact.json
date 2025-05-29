@@ -1,0 +1,30 @@
+{
+  "title": "Contact",
+  "subtitle": "Get in touch",
+  "workTogether": "Let's work together!",
+  "description": "Feel free to reach out if you have any questions, want to discuss a project, or just want to say hello!",
+  "form": {
+    "name": "Name*",
+    "email": "Email*",
+    "message": "Message*",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email",
+    "messageRequired": "Message is required"
+  },
+  "info": {
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "response": "Response Time"
+  },
+  "findMeSocialMedia": "Encuéntrame en las redes sociales",
+  "bookCall": "Book a Call",
+  "session": "1 on 1 Chit-chat Session",
+  "findTime": " Let's find some time to talk about anything",
+  "sendMessage": "Or send me a message"
+}

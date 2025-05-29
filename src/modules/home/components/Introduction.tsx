@@ -1,20 +1,24 @@
+import { useTranslation } from 'next-i18next';
+
 const Introduction = () => {
+  const { t } = useTranslation('home');
+
   return (
     <section className='bg-cover bg-no-repeat '>
       <div className='space-y-3'>
         <div className='flex gap-2  text-2xl font-medium lg:text-3xl'>
-          <h1>Hi, I&apos;m Luis Rojas</h1>{' '}
+          <h1>{t('introduction.greeting')}</h1>{' '}
           <div className='ml-1 animate-waving-hand'>👋</div>
         </div>
         <div className='space-y-4'>
           <ul className='ml-5 flex list-disc flex-col gap-1 text-neutral-700 dark:text-neutral-400 lg:flex-row lg:gap-10'>
             <li>
-              Based in Heredia, Costa Rica <span className='ml-1'>🇨🇷</span>
+              {t('introduction.location')} <span className='ml-1'>🇨🇷</span>
             </li>
-            <li>Software Engineer Full Stack at&nbsp;
+            <li>{t('introduction.position')}&nbsp;
               <a href="https://www.petsmart.com/" target="_blank">
                 <span className='cursor-pointer underline-offset-2 hover:text-dark hover:underline hover:dark:text-white'>
-                  PetSmart
+                  {t('introduction.company')}
                 </span>
               </a>
             </li>
@@ -23,9 +27,7 @@ const Introduction = () => {
       </div>
 
       <p className='mt-6 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
-        Full-stack engineer with over 10 years of experience leading front-end work in React and Next.js. 
-        I combine design sensitivity with TypeScript, Node, and Python to create fast, scalable, pixel-perfect
-         web applications while guiding cross-functional teams toward clean code and enjoyable user experiences.
+        {t('introduction.bio')}
       </p>
     </section>
   );

@@ -8,7 +8,6 @@ import useIsMobile from '@/common/hooks/useIsMobile';
 import MobileMenu from './MobileMenu';
 import MobileMenuButton from './MobileMenuButton';
 import ProfileHeader from './ProfileHeader';
-import SearchBox from '../elements/SearchBox';
 import ThemeToggleButton from '../elements/ThemeToggleButton';
 
 interface ProfileProps {

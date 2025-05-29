@@ -1,4 +1,5 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
 
 import Container from '@/common/components/elements/Container';
@@ -13,6 +14,18 @@ const HomePage: NextPage = () => {
       </Container>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+        'home',
+      ])),
+    },
+  };
 };
 
 export default HomePage;

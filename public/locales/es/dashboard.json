@@ -1,0 +1,27 @@
+{
+  "title": "Panel",
+  "subtitle": "Panel Personal",
+  "description": "Una colección de mis estadísticas personales y actividades",
+  "sections": {
+    "overview": "Resumen",
+    "coding": "Actividad de Programación",
+    "github": "Estadísticas de GitHub",
+    "spotify": "Reproduciendo Actualmente",
+    "blog": "Estadísticas del Blog",
+    "projects": "Resumen de Proyectos"
+  },
+  "stats": {
+    "totalProjects": "Total de Proyectos",
+    "totalCommits": "Total de Commits",
+    "totalStars": "Total de Estrellas",
+    "totalForks": "Total de Forks",
+    "languages": "Lenguajes Principales",
+    "activity": "Actividad Reciente"
+  },
+  "time": {
+    "today": "Hoy",
+    "thisWeek": "Esta Semana",
+    "thisMonth": "Este Mes",
+    "allTime": "Todo el Tiempo"
+  }
+}
