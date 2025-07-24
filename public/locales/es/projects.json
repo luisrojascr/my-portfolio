@@ -3,6 +3,16 @@
     "name": "Proyectos",
     "list": [
       {
+        "title": "Herencia Cósmica",
+        "description": "Una aplicación web integral de astrología que proporciona lecturas personalizadas de cartas natales e insights astrológicos enfocados en la herencia ancestral y la herencia cósmica.",
+        "content": "Herencia Cósmica es una aplicación web integral de astrología que proporciona lecturas personalizadas de cartas natales e insights astrológicos enfocados en la herencia ancestral y la herencia cósmica. La plataforma ofrece servicios astrológicos gratuitos y premium, ayudando a los usuarios a descubrir su propósito de vida y comprender sus patrones cósmicos ancestrales a través de la sabiduría astrológica antigua. Construida con tecnologías modernas incluyendo React 18, TypeScript y Vite para el frontend, shadcn/ui con Tailwind CSS para la interfaz, Supabase para servicios backend, y se integra con AstrologyAPI.com para la generación precisa de cartas."
+      },
+      {
+        "title": "ModiHogar",
+        "description": "Una plataforma de diseño de interiores impulsada por IA que democratiza los servicios profesionales de decoración del hogar. Los usuarios suben fotos de sus espacios, completan un cuestionario de estilo y reciben recomendaciones personalizadas de productos con visualizaciones de diseño generadas por IA.",
+        "content": "ModiHogar revoluciona el diseño de interiores haciendo que la decoración profesional sea accesible para todos. La plataforma combina inteligencia artificial con visión por computadora para analizar los espacios de los usuarios y proporcionar recomendaciones de diseño personalizadas. Los usuarios pueden subir fotos de sus habitaciones, realizar un cuestionario integral de estilo y recibir sugerencias de productos personalizadas junto con visualizaciones generadas por IA de cómo podría verse su espacio."
+      },
+      {
         "title": "Sitio Web de Portafolio Personal",
         "description": "Un portafolio moderno y responsivo construido con Next.js, TypeScript y Tailwind CSS. Incluye modo oscuro, animaciones y rendimiento optimizado.",
         "content": "Un sitio web de portafolio integral que muestra proyectos, habilidades y experiencia. Construido con tecnologías web modernas y mejores prácticas."

@@ -2,6 +2,32 @@ import { ProjectItemProps } from '../types/projects';
 
 export const PROJECTS: ProjectItemProps[] = [
   {
+    title: 'Herencia Cósmica - Side Project',
+    slug: 'herencia-cosmica',
+    description: 'A comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance.',
+    image: '/images/projects/portfolio-herencia-cosmica.png',
+    link_demo: 'https://herenciacosmica.com/',
+    link_github: '',
+    stacks: '["React 18", "TypeScript", "Vite", "shadcn/ui", "Tailwind CSS", "Supabase", "Zustand", "TanStack Query", "OpenAI"]',
+    content: 'Herencia Cósmica is a comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance. The platform offers both free and premium astrological services, helping users discover their life purpose and understand their ancestral cosmic patterns through ancient astrological wisdom. Built with modern technologies including React 18, TypeScript, and Vite for the frontend, shadcn/ui with Tailwind CSS for the UI, Supabase for backend services, and integrates with AstrologyAPI.com for accurate chart generation.',
+    is_show: true,
+    is_featured: true,
+    updated_at: new Date('2025-07-24'),
+  },
+  {
+    title: 'ModiHogar - Side Project',
+    slug: 'modihogar',
+    description: 'An AI-driven interior design platform. Users upload photos of their spaces, complete a style quiz, and receive personalized product recommendations with AI-generated design visualizations.',
+    image: '/images/projects/portfolio-modihogar.png',
+    link_demo: 'https://app.modihogar.com/',
+    link_github: '',
+    stacks: '["Next.js", "TypeScript", "AI/ML", "Computer Vision", "TailwindCSS"]',
+    content: 'ModiHogar revolutionizes interior design by making professional decoration accessible to everyone. The platform combines artificial intelligence with computer vision to analyze user spaces and provide personalized design recommendations. Users can upload photos of their rooms, take a comprehensive style quiz, and receive tailored product suggestions along with AI-generated visualizations of how their space could look.',
+    is_show: true,
+    is_featured: true,
+    updated_at: new Date('2025-07-24'),
+  },
+  {
     title: 'Personal Portfolio Website',
     slug: 'personal-portfolio',
     description: 'A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.',
@@ -24,7 +50,7 @@ export const PROJECTS: ProjectItemProps[] = [
     stacks: '["Next.js", "TypeScript", "Chakra UI ", "Styled-Components", "ContentFul", "Elastic Path"]',
     content: 'A React/Next.js front-end styled with Chakra UI, typed in TypeScript and built with TDD. Pages are served through an Apache HTTP Server that hands off assets to the Akamai CDN for global edge caching.',
     is_show: true,
-    is_featured: false,
+    is_featured: true,
     updated_at: new Date('2025-02-20'),
   },
   {

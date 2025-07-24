@@ -3,6 +3,16 @@
     "name": "Projects",
     "list": [
       {
+        "title": "Herencia Cósmica",
+        "description": "A comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance.",
+        "content": "Herencia Cósmica is a comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance. The platform offers both free and premium astrological services, helping users discover their life purpose and understand their ancestral cosmic patterns through ancient astrological wisdom. Built with modern technologies including React 18, TypeScript, and Vite for the frontend, shadcn/ui with Tailwind CSS for the UI, Supabase for backend services, and integrates with AstrologyAPI.com for accurate chart generation."
+      },
+      {
+        "title": "ModiHogar",
+        "description": "An AI-driven interior design platform that democratizes professional home decoration services. Users upload photos of their spaces, complete a style quiz, and receive personalized product recommendations with AI-generated design visualizations.",
+        "content": "ModiHogar revolutionizes interior design by making professional decoration accessible to everyone. The platform combines artificial intelligence with computer vision to analyze user spaces and provide personalized design recommendations. Users can upload photos of their rooms, take a comprehensive style quiz, and receive tailored product suggestions along with AI-generated visualizations of how their space could look."
+      },
+      {
         "title": "Personal Portfolio Website",
         "description": "A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.",
         "content": "A comprehensive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and best practices."

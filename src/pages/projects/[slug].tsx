@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
 
 import BackButton from '@/common/components/elements/BackButton';
@@ -51,7 +52,7 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
 
 export default ProjectsDetailPage;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const project = PROJECTS.find((project) => project.slug === String(params?.slug));
 
   if (!project) {
@@ -63,15 +64,27 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       project: JSON.parse(JSON.stringify(project)),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+        'projects',
+      ])),
     },
     revalidate: 1,
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = PROJECTS.map((project) => ({
-    params: { slug: project.slug },
-  }));
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  const paths = locales?.reduce<{ params: { slug: string }; locale: string }[]>(
+    (acc, locale) => [
+      ...acc,
+      ...PROJECTS.map((project) => ({
+        params: { slug: project.slug },
+        locale,
+      })),
+    ],
+    []
+  ) || [];
 
   return {
     paths,
