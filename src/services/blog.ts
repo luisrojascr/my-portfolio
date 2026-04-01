@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios, { AxiosError, AxiosResponse } from 'axios';
-
 import { BlogItemProps } from '@/common/types/blog';
 
 type BlogParamsProps = {
@@ -17,34 +15,32 @@ interface BlogDetailResponseProps {
 
 const BLOG_URL = process.env.BLOG_API_URL as string;
 
-const handleAxiosError = (
-  error: AxiosError<any>,
-): { status: number; data: any } => {
-  if (error?.response) {
-    return { status: error?.response?.status, data: error?.response?.data };
-  } else {
-    return { status: 500, data: { message: 'Internal Server Error' } };
+const handleFetchError = (error: unknown): { status: number; data: any } => {
+  if (error instanceof Error) {
+    return { status: 500, data: { message: error.message } };
   }
+  return { status: 500, data: { message: 'Internal Server Error' } };
 };
 
 const extractData = (
-  response: AxiosResponse,
+  data: unknown,
+  headers: Headers,
+  params: { page: number; per_page: number; categories?: number },
 ): {
   posts: BlogItemProps[];
   page: number;
   per_page: number;
   total_pages: number;
   total_posts: number;
-  categories: number;
+  categories: number | undefined;
 } => {
-  const { headers, data } = response;
   return {
-    posts: data,
-    page: response?.config?.params?.page || 1,
-    per_page: response?.config?.params?.per_page || 6,
-    total_pages: Number(headers['x-wp-totalpages']) || 0,
-    total_posts: Number(headers['x-wp-total']) || 0,
-    categories: response?.config?.params?.categories,
+    posts: data as BlogItemProps[],
+    page: params.page,
+    per_page: params.per_page,
+    total_pages: Number(headers.get('x-wp-totalpages')) || 0,
+    total_posts: Number(headers.get('x-wp-total')) || 0,
+    categories: params.categories,
   };
 };
 
@@ -55,11 +51,35 @@ export const getBlogList = async ({
   search,
 }: BlogParamsProps): Promise<{ status: number; data: any }> => {
   try {
-    const params = { page, per_page, categories, search };
-    const response = await axios.get(`${BLOG_URL}posts`, { params });
-    return { status: response?.status, data: extractData(response) };
+    const searchParams = new URLSearchParams();
+    searchParams.set('page', String(page));
+    searchParams.set('per_page', String(per_page));
+    if (categories !== undefined) {
+      searchParams.set('categories', String(categories));
+    }
+    if (search) {
+      searchParams.set('search', search);
+    }
+
+    const response = await fetch(`${BLOG_URL}posts?${searchParams.toString()}`);
+
+    if (!response.ok) {
+      let errorData: unknown;
+      try {
+        errorData = await response.json();
+      } catch {
+        errorData = {};
+      }
+      return { status: response.status, data: errorData };
+    }
+
+    const data = await response.json();
+    return {
+      status: response.status,
+      data: extractData(data, response.headers, { page, per_page, categories }),
+    };
   } catch (error) {
-    return handleAxiosError(error as AxiosError<any>);
+    return handleFetchError(error);
   }
 };
 
@@ -67,9 +87,21 @@ export const getBlogDetail = async (
   id: number,
 ): Promise<BlogDetailResponseProps> => {
   try {
-    const response = await axios.get(`${BLOG_URL}posts/${id}`);
-    return { status: response?.status, data: response?.data };
+    const response = await fetch(`${BLOG_URL}posts/${id}`);
+
+    if (!response.ok) {
+      let errorData: unknown;
+      try {
+        errorData = await response.json();
+      } catch {
+        errorData = {};
+      }
+      return { status: response.status, data: errorData };
+    }
+
+    const data = await response.json();
+    return { status: response.status, data };
   } catch (error) {
-    return handleAxiosError(error as AxiosError<any>);
+    return handleFetchError(error);
   }
 };

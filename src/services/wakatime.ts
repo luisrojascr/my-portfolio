@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios';
 
 const API_KEY = process.env.WAKATIME_API_KEY;
 
@@ -11,7 +10,7 @@ export const getReadStats = async (): Promise<{
   status: number;
   data: any;
 }> => {
-  const response = await axios.get(`${STATS_ENDPOINT}/last_7_days`, {
+  const response = await fetch(`${STATS_ENDPOINT}/last_7_days`, {
     headers: {
       Authorization: `Basic ${API_KEY}`,
     },
@@ -21,7 +20,7 @@ export const getReadStats = async (): Promise<{
 
   if (status >= 400) return { status, data: [] };
 
-  const getData = response.data;
+  const getData = await response.json();
 
   const start_date = getData?.data?.start;
   const end_date = getData?.data?.end;
@@ -61,7 +60,7 @@ export const getALLTimeSinceToday = async (): Promise<{
   status: number;
   data: any;
 }> => {
-  const response = await axios.get(ALL_TIME_SINCE_TODAY, {
+  const response = await fetch(ALL_TIME_SINCE_TODAY, {
     headers: {
       Authorization: `Basic ${API_KEY}`,
     },
@@ -71,7 +70,7 @@ export const getALLTimeSinceToday = async (): Promise<{
 
   if (status >= 400) return { status, data: {} };
 
-  const getData = response.data;
+  const getData = await response.json();
 
   const data = {
     text: getData?.data?.text,

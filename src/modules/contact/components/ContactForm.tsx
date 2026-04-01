@@ -1,4 +1,3 @@
-import axios from 'axios';
 import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
@@ -47,13 +46,17 @@ const ContactForm = () => {
     if (!hasErrors) {
       setIsLoading(true);
       try {
-        const response = await axios.post('/api/contact', { formData });
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ formData }),
+        });
         if (response.status === 200) {
           alert('Message sent!');
           setFormData(formInitialState);
         }
       } catch (error) {
-        alert(error);
+        alert(error instanceof Error ? error.message : String(error));
       }
       setIsLoading(false);
     } else {

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { GetServerSideProps, NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
@@ -29,7 +28,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   const description = formatExcerpt(blogData?.excerpt?.rendered);
 
   const incrementViews = async () => {
-    await axios.post(`/api/views?&slug=${blogData?.slug}`);
+    await fetch(`/api/views?&slug=${blogData?.slug}`, { method: 'POST' });
   };
 
   useEffect(() => {

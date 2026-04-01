@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios';
 import querystring from 'querystring';
 
 import { PAIR_DEVICES } from '@/common/constant/devices';
@@ -25,27 +24,25 @@ const TOP_TRACKS_ENDPOINT = `${BASE_URL}/me/top/tracks`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async (): Promise<AccessTokenResponseProps> => {
-  const response = await axios.post(
-    TOKEN_ENDPOINT,
-    querystring.stringify({
+  const response = await fetch(TOKEN_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${TOKEN}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: querystring.stringify({
       grant_type: 'refresh_token',
       refresh_token: REFRESH_TOKEN,
     }),
-    {
-      headers: {
-        Authorization: `Basic ${TOKEN}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    },
-  );
+  });
 
-  return response.data;
+  return response.json();
 };
 
 export const getAvailableDevices = async (): Promise<DeviceResponseProps> => {
   const { access_token } = await getAccessToken();
 
-  const response = await axios.get(AVAILABLE_DEVICES_ENDPOINT, {
+  const response = await fetch(AVAILABLE_DEVICES_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -57,7 +54,7 @@ export const getAvailableDevices = async (): Promise<DeviceResponseProps> => {
     return { status, data: [] };
   }
 
-  const responseData: DeviceDataProps = response.data;
+  const responseData: DeviceDataProps = await response.json();
 
   const devices = responseData?.devices?.map((device) => ({
     name: device.name,
@@ -76,7 +73,7 @@ export const getAvailableDevices = async (): Promise<DeviceResponseProps> => {
 export const getNowPlaying = async (): Promise<NowPlayingResponseProps> => {
   const { access_token } = await getAccessToken();
 
-  const response = await axios.get(NOW_PLAYING_ENDPOINT, {
+  const response = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -88,7 +85,7 @@ export const getNowPlaying = async (): Promise<NowPlayingResponseProps> => {
     return { status, isPlaying: false, data: null };
   }
 
-  const responseData: SongProps = response.data;
+  const responseData: SongProps = await response.json();
 
   if (!responseData.item) {
     return { status, isPlaying: false, data: null };
@@ -120,7 +117,7 @@ export const getNowPlaying = async (): Promise<NowPlayingResponseProps> => {
 export const getTopTracks = async (): Promise<TopTracksResponseProps> => {
   const { access_token } = await getAccessToken();
 
-  const response = await axios.get(`${TOP_TRACKS_ENDPOINT}?limit=10`, {
+  const response = await fetch(`${TOP_TRACKS_ENDPOINT}?limit=10`, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -132,7 +129,7 @@ export const getTopTracks = async (): Promise<TopTracksResponseProps> => {
     return { status, data: [] };
   }
 
-  const responseData = response.data;
+  const responseData = await response.json();
 
   const tracks: TrackProps[] = responseData.items.map((track: any) => ({
     album: {
