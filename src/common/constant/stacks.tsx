@@ -1,8 +1,9 @@
+import type { ReactElement } from 'react';
 import { BsRobot } from 'react-icons/bs';
 import {
   SiAngular,
   SiApollographql,
-  SiCss3,
+  SiCss,
   SiExpress,
   SiFirebase,
   SiGraphql,
@@ -27,7 +28,7 @@ SiPython,  SiReact,
   SiWordpress} from 'react-icons/si';
 
 export type stacksProps = {
-  [key: string]: JSX.Element;
+  [key: string]: ReactElement;
 };
 
 const iconSize = 20;
@@ -59,7 +60,7 @@ export const STACKS: stacksProps = {
   PWA: <SiPwa size={iconSize} className='text-amber-600' />,
   Jest: <SiJest size={iconSize} className='text-red-600' />,
   Storybook: <SiStorybook size={iconSize} className='text-amber-500' />,
-  CSS: <SiCss3 size={iconSize} className='text-blue-300' />,
+  CSS: <SiCss size={iconSize} className='text-blue-300' />,
   Express: <SiExpress size={iconSize} />,
   Nx: <SiNx size={iconSize} />,
   PostgreSQL: <SiPostgresql size={iconSize} />,

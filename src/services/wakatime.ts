@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 
 const API_KEY = process.env.WAKATIME_API_KEY;
 

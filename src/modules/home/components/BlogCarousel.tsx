@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useMemo, useRef } from 'react';
+import { type MutableRefObject, useMemo, useRef } from 'react';
 import { useDraggable } from 'react-use-draggable-scroll';
 import useSWR from 'swr';
 
@@ -18,8 +18,7 @@ const BlogCarousel = () => {
     return data?.data?.posts || [];
   }, [data]);
 
-  const ref =
-    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+  const ref = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement>;
   const { events } = useDraggable(ref);
 
   const renderBlogCards = () => {

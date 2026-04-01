@@ -1,10 +1,15 @@
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { type ComponentPropsWithoutRef,useEffect, useState } from 'react';
 import {
   HiCheckCircle as CheckIcon,
   HiOutlineClipboardCopy as CopyIcon,
 } from 'react-icons/hi';
-import { CodeProps } from 'react-markdown/lib/ast-to-react';
+import type { ExtraProps } from 'react-markdown';
+
+type CodeProps = ComponentPropsWithoutRef<'code'> &
+  ExtraProps & {
+    inline?: boolean;
+  };
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 import diff from 'react-syntax-highlighter/dist/cjs/languages/prism/diff';
@@ -62,7 +67,7 @@ const CodeBlock = ({
             className='absolute right-3 top-3 rounded-lg border border-neutral-700 p-2 hover:bg-neutral-800'
             type='button'
             aria-label='Copy to Clipboard'
-            onClick={() => handleCopy(children.toString())}
+            onClick={() => handleCopy(String(children ?? ''))}
             data-umami-event='Click Copy Code'
           >
             {!isCopied ? (
@@ -85,7 +90,7 @@ const CodeBlock = ({
             language={match ? match[1] : 'javascript'}
             wrapLongLines={true}
           >
-            {String(children).replace(/\n$/, '')}
+            {String(children ?? '').replace(/\n$/, '')}
           </SyntaxHighlighter>
         </div>
       ) : (

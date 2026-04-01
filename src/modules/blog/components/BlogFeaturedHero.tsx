@@ -44,7 +44,7 @@ const BlogFeaturedHero = ({ data }: BlogFeaturedProps) => {
     return () => {
       clearInterval(intervalId);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [featuredData]);
 
   if (!data || data.length === 0) {
