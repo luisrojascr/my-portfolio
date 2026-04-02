@@ -9,6 +9,7 @@ import {
 import {
   FiCoffee as ProjectIcon,
   FiCpu as DashboardIcon,
+  FiEdit3 as LaunchRefinedIcon,
   // FiPieChart as AnalyticsIcon,
   FiPocket as HomeIcon,
   // FiRss as BlogIcon,
@@ -47,6 +48,15 @@ export const MENU_ITEMS: MenuItemProps[] = [
     eventName: 'Pages: Projects',
     type: 'Pages',
   },
+  {
+    title: 'Launch refined',
+    href: '/launch-refined',
+    icon: <LaunchRefinedIcon size={iconSize} />,
+    isShow: true,
+    isExternal: false,
+    eventName: 'Pages: Launch refined',
+    type: 'Pages',
+  },
   // {
   //   title: 'Blog',
   //   href: '/blog',
@@ -75,7 +85,6 @@ export const MENU_ITEMS: MenuItemProps[] = [
     type: 'Pages',
   },
 ];
-
 
 export const SOCIAL_MEDIA: MenuItemProps[] = [
   {

@@ -2,79 +2,112 @@ import { ProjectItemProps } from '../types/projects';
 
 export const PROJECTS: ProjectItemProps[] = [
   {
-    title: 'Herencia Cósmica - Side Project',
-    slug: 'herencia-cosmica',
-    description: 'A comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance.',
-    image: '/images/projects/portfolio-herencia-cosmica.png',
-    link_demo: 'https://herenciacosmica.com/',
+    title: 'Oppy Hound App',
+    slug: 'oppy-hound-app',
+    description:
+      'A Next.js web application for federal contracting teams to search SAM.gov-style opportunities, manage watchlists, and use AI-assisted chat and deep-dive analysis, with subscriptions and integrations for auth, search, and marketing.',
+    image: '/images/projects/portfolio-oppyhound.png',
+    link_demo: 'https://oppyhound.com/',
     link_github: '',
-    stacks: '["React 18", "TypeScript", "Vite", "shadcn/ui", "Tailwind CSS", "Supabase", "Zustand", "TanStack Query", "OpenAI"]',
-    content: 'Herencia Cósmica is a comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance. The platform offers both free and premium astrological services, helping users discover their life purpose and understand their ancestral cosmic patterns through ancient astrological wisdom. Built with modern technologies including React 18, TypeScript, and Vite for the frontend, shadcn/ui with Tailwind CSS for the UI, Supabase for backend services, and integrates with AstrologyAPI.com for accurate chart generation.',
+    stacks:
+      '["Next.js 15", "TypeScript", "React", "Material UI v7", "MUI X Pro", "Redux Toolkit", "AWS Amplify", "AppSync GraphQL", "DynamoDB", "AWS Cognito", "JWT (jose)", "OAuth (Google, LinkedIn)", "Elasticsearch", "Stripe", "Dexie.js", "HubSpot", "Jest", "React Testing Library"]',
+    content:
+      'GovBidAI (production app: Oppyhound) is a federal contracting platform built on Next.js 15 with the Pages Router and TypeScript. It combines opportunity discovery and lookup (backed by Elasticsearch on the SAM-style index), user accounts and company profiles stored in DynamoDB via Amplify AppSync GraphQL, and client-side caching with Dexie in IndexedDB. Authentication uses Cognito and social OAuth, with JWTs in HTTP-only cookies and centralized route protection via server-side helpers. The UI is built with Material UI and MUI X Pro; global state uses Redux Toolkit and custom middleware for chat and membership sync. Stripe powers subscriptions and purchases; HubSpot and UserFlow support marketing and onboarding. Jest and React Testing Library cover unit and component tests, with E2E automation in a separate repository. The stack is deployed on AWS Amplify Hosting with environment-specific configuration and documented auth, Stripe webhook, and Amplify workflows.',
     is_show: true,
     is_featured: true,
-    updated_at: new Date('2025-07-24'),
+    updated_at: new Date('2026-04-02'),
   },
   {
     title: 'ModiHogar - Side Project',
     slug: 'modihogar',
-    description: 'An AI-driven interior design platform. Users upload photos of their spaces, complete a style quiz, and receive personalized product recommendations with AI-generated design visualizations.',
+    description:
+      'An AI-driven interior design platform. Users upload photos of their spaces, complete a style quiz, and receive personalized product recommendations with AI-generated design visualizations.',
     image: '/images/projects/portfolio-modihogar.png',
     link_demo: 'https://app.modihogar.com/',
     link_github: '',
-    stacks: '["Next.js", "TypeScript", "AI/ML", "Computer Vision", "TailwindCSS"]',
-    content: 'ModiHogar revolutionizes interior design by making professional decoration accessible to everyone. The platform combines artificial intelligence with computer vision to analyze user spaces and provide personalized design recommendations. Users can upload photos of their rooms, take a comprehensive style quiz, and receive tailored product suggestions along with AI-generated visualizations of how their space could look.',
+    stacks:
+      '["Next.js", "TypeScript", "AI/ML", "Computer Vision", "TailwindCSS"]',
+    content:
+      'ModiHogar revolutionizes interior design by making professional decoration accessible to everyone. The platform combines artificial intelligence with computer vision to analyze user spaces and provide personalized design recommendations. Users can upload photos of their rooms, take a comprehensive style quiz, and receive tailored product suggestions along with AI-generated visualizations of how their space could look.',
     is_show: true,
     is_featured: true,
-    updated_at: new Date('2025-07-24'),
-  },
-  {
-    title: 'Personal Portfolio Website',
-    slug: 'personal-portfolio',
-    description: 'A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.',
-    image: '/images/projects/portfolio-site.png',
-    link_demo: 'https://luisrojascr',
-    link_github: 'https://github.com/luisrojascr/my-portfolio',
-    stacks: '["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]',
-    content: 'A comprehensive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and best practices.',
-    is_show: true,
-    is_featured: true,
-    updated_at: new Date('2025-05-25'),
+    updated_at: new Date('2025-09-24'),
   },
   {
     title: 'ISSA E-Commerce Platform',
     slug: 'issa-ecommerce-platform',
-    description: 'ISSA Online is the public-facing e-learning and e-commerce site of the International Sports Sciences Association.',
+    description:
+      'ISSA Online is the public-facing e-learning and e-commerce site of the International Sports Sciences Association.',
     image: '/images/projects/issaonline-site.png',
     link_demo: 'https://www.issaonline.com/',
     link_github: '',
-    stacks: '["Next.js", "TypeScript", "Chakra UI ", "Styled-Components", "ContentFul", "Elastic Path"]',
-    content: 'A React/Next.js front-end styled with Chakra UI, typed in TypeScript and built with TDD. Pages are served through an Apache HTTP Server that hands off assets to the Akamai CDN for global edge caching.',
+    stacks:
+      '["Next.js", "TypeScript", "Chakra UI ", "Styled-Components", "ContentFul", "Elastic Path"]',
+    content:
+      'A React/Next.js front-end styled with Chakra UI, typed in TypeScript and built with TDD. Pages are served through an Apache HTTP Server that hands off assets to the Akamai CDN for global edge caching.',
     is_show: true,
     is_featured: true,
     updated_at: new Date('2025-02-20'),
   },
   {
+    title: 'Personal Portfolio Website',
+    slug: 'personal-portfolio',
+    description:
+      'A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, animations, and optimized performance.',
+    image: '/images/projects/portfolio-site.png',
+    link_demo: 'https://luisrojascr',
+    link_github: 'https://github.com/luisrojascr/my-portfolio',
+    stacks: '["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]',
+    content:
+      'A comprehensive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and best practices.',
+    is_show: true,
+    is_featured: true,
+    updated_at: new Date('2025-05-25'),
+  },
+  {
     title: 'Antimatter',
     slug: 'weather-dashboard',
-    description: 'Antimatter (antimatter.io) is developing a new product to help people securely manage customer data while creating AI features using LLMs. ',
+    description:
+      'Antimatter (antimatter.io) is developing a new product to help people securely manage customer data while creating AI features using LLMs. ',
     image: '/images/projects/antimatter-dashboard.png',
     link_demo: 'https://app.antimatter.io/dashboard',
     link_github: '',
-    stacks: '["TypeScript", "React", "JavaScript", "Jest", "Material-UI", "Next.js", "Styled-Components", "Playwright"]',
-    content: 'This product consists primarily of libraries and services that SaaS companies can use to classify, encrypt, and enforce data governance policies for customer data.',
+    stacks:
+      '["TypeScript", "React", "JavaScript", "Jest", "Material-UI", "Next.js", "Styled-Components", "Playwright"]',
+    content:
+      'This product consists primarily of libraries and services that SaaS companies can use to classify, encrypt, and enforce data governance policies for customer data.',
     is_show: true,
     is_featured: true,
     updated_at: new Date('2024-12-20'),
   },
   {
+    title: 'Herencia Cósmica - Side Project',
+    slug: 'herencia-cosmica',
+    description:
+      'A comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance.',
+    image: '/images/projects/portfolio-herencia-cosmica.png',
+    link_demo: 'https://herenciacosmica.com/',
+    link_github: '',
+    stacks:
+      '["React 18", "TypeScript", "Vite", "shadcn/ui", "Tailwind CSS", "Supabase", "Zustand", "TanStack Query", "OpenAI"]',
+    content:
+      'Herencia Cósmica is a comprehensive astrology web application that provides personalized natal chart readings and astrological insights focused on ancestral heritage and cosmic inheritance. The platform offers both free and premium astrological services, helping users discover their life purpose and understand their ancestral cosmic patterns through ancient astrological wisdom. Built with modern technologies including React 18, TypeScript, and Vite for the frontend, shadcn/ui with Tailwind CSS for the UI, Supabase for backend services, and integrates with AstrologyAPI.com for accurate chart generation.',
+    is_show: true,
+    is_featured: false,
+    updated_at: new Date('2025-07-24'),
+  },
+  {
     title: 'Molekule',
     slug: 'molekule-app',
-    description: 'The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin',
+    description:
+      'The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin',
     image: '/images/projects/molekule.png',
     link_demo: 'https://map-dev.molekule.com/',
     link_github: '',
-    stacks: '["Angular", "TypeScript", "RxJS", "ES6", "NGX-Admin", "AWS Cognito"]',
-    content: "The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin. It features robust user authentication managed through AWS Cognito. For a hands-on experience, you're welcome to set up a test account or contact me for access to a demo account.",
+    stacks:
+      '["Angular", "TypeScript", "RxJS", "ES6", "NGX-Admin", "AWS Cognito"]',
+    content:
+      "The Admin portal dashboard for Molekule is a sophisticated web application I developed using Angular and Ngx-admin. It features robust user authentication managed through AWS Cognito. For a hands-on experience, you're welcome to set up a test account or contact me for access to a demo account.",
     is_show: true,
     is_featured: false,
     updated_at: new Date('2023-09-15'),
@@ -82,12 +115,15 @@ export const PROJECTS: ProjectItemProps[] = [
   {
     title: 'Minerva App',
     slug: 'minerva-app',
-    description: 'I developed a data-focused web application for a client named Minerva Data',
+    description:
+      'I developed a data-focused web application for a client named Minerva Data',
     image: '/images/projects/minerva.png',
     link_demo: 'https://minerva-platform.herokuapp.com/',
     link_github: '',
-    stacks: '["Angular", "TypeScript", "RxJS", "Sass", "Material Design", "AWS Cognito"]',
-    content: 'Tailored to offer comprehensive data insights specifically for Costa Rican companies. Originally hosted on Heroku, this project, while no longer actively maintained, showcased a robust platform for data analysis and visualization.',
+    stacks:
+      '["Angular", "TypeScript", "RxJS", "Sass", "Material Design", "AWS Cognito"]',
+    content:
+      'Tailored to offer comprehensive data insights specifically for Costa Rican companies. Originally hosted on Heroku, this project, while no longer actively maintained, showcased a robust platform for data analysis and visualization.',
     is_show: true,
     is_featured: false,
     updated_at: new Date('2023-08-20'),
@@ -95,12 +131,14 @@ export const PROJECTS: ProjectItemProps[] = [
   {
     title: 'Vanity Spa',
     slug: 'vanity-spa',
-    description: "This application, specifically designed for my wife's spa, streamlines the booking process.",
+    description:
+      "This application, specifically designed for my wife's spa, streamlines the booking process.",
     image: '/images/projects/portfolio-vanityspa.png',
     link_demo: 'https://vanityspacostarica.com/',
     link_github: '',
     stacks: '["WordPress", "PHP", "HTML", "CSS"]',
-    content: "It efficiently integrates data from the Setmore API, optimizing appointment scheduling and management. It's WordPress powered website for my wife's spa. I modified some features of the original WordPress theme.",
+    content:
+      "It efficiently integrates data from the Setmore API, optimizing appointment scheduling and management. It's WordPress powered website for my wife's spa. I modified some features of the original WordPress theme.",
     is_show: true,
     is_featured: false,
     updated_at: new Date('2023-07-12'),
@@ -108,12 +146,14 @@ export const PROJECTS: ProjectItemProps[] = [
   {
     title: 'Rumbo Económico',
     slug: 'rumbo-economico',
-    description: 'WordPress site for Rumbo Económico, a Costa Rican news portal.',
+    description:
+      'WordPress site for Rumbo Económico, a Costa Rican news portal.',
     image: '/images/projects/portfolio-rumbo-economico.png',
     link_demo: 'https://rumboeconomico.net/',
     link_github: '',
     stacks: '["WordPress", "PHP", "HTML", "CSS"]',
-    content: 'A powerful analytics tool for social media professionals to track performance and optimize their content strategy.',
+    content:
+      'A powerful analytics tool for social media professionals to track performance and optimize their content strategy.',
     is_show: true,
     is_featured: false,
     updated_at: new Date('2023-06-08'),

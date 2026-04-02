@@ -9,7 +9,7 @@ const BookACall = () => {
     <div className='space-y-5 pb-2'>
       <h3 className='text-lg font-medium'>{t('bookCall')}</h3>
       <Link
-        href='https://cal.com/luisrojascr/30min'
+        href='https://calendly.com/luisrojascr88/meeting'
         target='_blank'
         rel='noopener noreferrer'
         data-aos-duration='1000'

@@ -2,12 +2,14 @@ import Breakline from '@/common/components/elements/Breakline';
 
 // import BlogPreview from './BlogPreview';
 import Introduction from './Introduction';
+import LaunchRefinedBanner from './LaunchRefinedBanner';
 import Services from './Services';
 import SkillsSection from './SkillsSection';
 
 const Home = () => {
   return (
     <>
+      <LaunchRefinedBanner />
       <Introduction />
       <Breakline className='mb-7 mt-8' />
       {/* <BlogPreview /> */}

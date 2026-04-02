@@ -1,0 +1,228 @@
+{
+  "seo": {
+    "title": "LaunchRefined — Luis Rojas",
+    "description": "Product refinement for validated MVPs built with Base44, Lovable, Bolt, v0, and similar tools. Audits, sprints, and upgrades—sharper UX, performance, and trust."
+  },
+  "hero": {
+    "eyebrow": "AI app refinement for serious launches",
+    "title": "Your Base44 or Lovable MVP works. Now make it feel credible.",
+    "description1": "AI tools can get you to a working product fast. What they usually do not give you is product judgment: the clarity, polish, speed, and trust signals that make users stay, understand, and convert.",
+    "description2": "I help founders refine AI-built apps into products that feel intentional, usable, fast, and ready to be seen.",
+    "primaryCta": "Start with an Audit",
+    "secondaryCta": "See Services",
+    "visualCaption": "Before → after: wireframe to production polish",
+    "imageAlt": "Illustration of refined product UI: layered dashboard mockups suggesting a polished, credible app after refinement"
+  },
+  "gap": {
+    "title": "The gap between “it works” and “it feels ready”",
+    "description": "Most AI-generated apps are functional enough to demo, but still fall short in the places that matter most once real users arrive.",
+    "items": {
+      "genericUx": {
+        "title": "Generic UX",
+        "description": "The app technically works, but the experience feels templated, inconsistent, or forgettable."
+      },
+      "weakHierarchy": {
+        "title": "Weak product hierarchy",
+        "description": "Important actions do not stand out, screens compete for attention, and users are left guessing what matters."
+      },
+      "trustFriction": {
+        "title": "Trust friction",
+        "description": "Small details signal risk: awkward spacing, inconsistent copy, broken states, and flows that feel unfinished."
+      },
+      "conversionLeakage": {
+        "title": "Conversion leakage",
+        "description": "Users drop off because the product feels unclear, weak, slow, or not credible enough."
+      },
+      "performanceFriction": {
+        "title": "Performance drag",
+        "description": "Slow loads, laggy interactions, and clunky mobile behavior make the product feel fragile and reduce confidence fast."
+      }
+    }
+  },
+  "refinement": {
+    "title": "Refinement, not a rebuild",
+    "description": "You do not always need to throw away the AI-generated version and start over. In many cases, the fastest path is to keep what is already working and improve the parts that affect perception, usability, speed, and conversion.",
+    "items": {
+      "uiPolish": {
+        "title": "UI polish",
+        "description": "Sharpen spacing, hierarchy, visual consistency, and states so the product feels designed instead of assembled."
+      },
+      "uxClarity": {
+        "title": "UX clarity",
+        "description": "Make flows easier to follow, reduce hesitation, and help users understand what to do next."
+      },
+      "flowOptimization": {
+        "title": "Flow optimization",
+        "description": "Remove unnecessary friction from onboarding, form experiences, and key conversion paths."
+      },
+      "performance": {
+        "title": "Performance and responsiveness",
+        "description": "Improve perceived speed, interaction smoothness, and responsiveness in the moments that affect trust most."
+      },
+      "productionCleanup": {
+        "title": "Production-minded cleanup",
+        "description": "Address edge cases, rough interactions, loading states, and the details that break trust during real usage."
+      }
+    }
+  },
+  "who": {
+    "title": "Who this is for",
+    "description": "LaunchRefined is an exclusive service for founders, operators, and small teams who moved quickly with tools like Base44, Lovable, Bolt, or v0 and now need the product to hold up in front of customers, investors, or internal stakeholders.",
+    "bullets": {
+      "mvp": "You already have an MVP or working prototype",
+      "premium": "You want the product to feel more premium and trustworthy",
+      "focused": "You need focused refinement, not months of redesign work",
+      "cares": "You care about both visual quality and functional UX",
+      "readiness": "You want better performance, smoother interactions, and stronger conversion readiness"
+    }
+  },
+  "outcomes": {
+    "title": "What changes after refinement",
+    "items": {
+      "deliberate": "The product feels more deliberate",
+      "understand": "Users understand the flow faster",
+      "complete": "Core actions become easier to complete",
+      "trustworthy": "The app looks more trustworthy in demos and live use",
+      "fasterSmoother": "The experience feels faster and smoother",
+      "aiSpeed": "You keep the speed of AI tooling, but reduce the cost of rough execution"
+    }
+  },
+  "engagements": {
+    "title": "Services",
+    "includedLabel": "What’s included",
+    "timelineLabel": "Timeline",
+    "priceLabel": "Price",
+    "audit": {
+      "label": "Audit",
+      "title": "MVP Polish Audit",
+      "description": "A focused review of your current product with clear recommendations on UX, interface quality, performance issues, trust gaps, and conversion blockers.",
+      "bestFor": "Best for teams who want clear direction before investing in changes",
+      "included": [
+        "Product review of key screens and flows",
+        "UX, UI, performance, and trust analysis",
+        "Prioritized findings",
+        "Recommended next steps",
+        "Async summary with actionable guidance"
+      ],
+      "timeline": "1 to 2 business days",
+      "price": "$195",
+      "cta": "Request an Audit"
+    },
+    "sprint": {
+      "label": "Sprint",
+      "title": "Product Refinement Sprint",
+      "description": "A short, high-impact engagement to improve the screens, flows, and details that make the product feel more polished, usable, fast, and launch-ready.",
+      "bestFor": "Best for teams who need tangible improvements fast",
+      "included": [
+        "UX improvements in critical flows",
+        "UI polish and hierarchy cleanup",
+        "Responsive refinement",
+        "Loading, empty, and error state improvements",
+        "Performance and responsiveness improvements",
+        "Fixes for the most visible trust-breaking issues"
+      ],
+      "timeline": "5 to 7 business days",
+      "price": "Starting at $1,500",
+      "cta": "Book a Sprint Call"
+    },
+    "upgrade": {
+      "label": "Upgrade",
+      "title": "Validated MVP Upgrade",
+      "description": "A more complete engagement that combines strategy and execution to refine the product itself and improve how it is presented.",
+      "bestFor": "Best for founders who want the product and presentation to match the ambition",
+      "included": [
+        "MVP Polish Audit",
+        "Product Refinement Sprint",
+        "Landing page improvement or new conversion-focused landing",
+        "Clearer product presentation and stronger trust signals across the experience"
+      ],
+      "timeline": "7 to 14 business days",
+      "price": "Starting at $2,800",
+      "cta": "Discuss the Upgrade"
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      {
+        "title": "Audit",
+        "description": "I review the product, identify the highest-impact issues, and surface what is hurting clarity, trust, speed, and conversion."
+      },
+      {
+        "title": "Prioritize",
+        "description": "We define the most important fixes for the current stage of the product. No vague roadmaps. Just focused priorities."
+      },
+      {
+        "title": "Refine",
+        "description": "I improve the product where it matters most: structure, polish, interactions, performance, and conversion-critical flows."
+      },
+      {
+        "title": "Deliver",
+        "description": "You get a version that feels clearer, stronger, faster, and more credible without turning the whole project into a rebuild."
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "imageAlt": "Luis Rojas — software engineer and LaunchRefined founder",
+    "p1": "I’m Luis Rojas, a software engineer with 10+ years of experience building and improving real-world applications used by thousands of users.",
+    "p2": "Most validated MVPs don’t need a rebuild — they need sharper UX, better performance, and stronger trust signals. That’s the gap I focus on.",
+    "p3": "You work directly with me. No layers, no handoffs, no bloated process — just focused execution on what actually improves the product."
+  },
+  "typicalIssues": {
+    "title": "Typical issues I fix",
+    "items": [
+      "Inconsistent UI and spacing",
+      "Weak visual hierarchy",
+      "Awkward onboarding",
+      "Slow or laggy interactions",
+      "Poor perceived performance and responsiveness",
+      "Poor mobile polish",
+      "Broken loading or empty states",
+      "Trust-breaking details across the interface",
+      "Conversion friction in key flows",
+      "Generic landing experiences that undersell the product"
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "Do you only work with Base44 products?",
+        "answer": "No. I also work with products built with Lovable, Bolt, v0, and other modern stacks. Base44 is simply one of the clearest examples of this market."
+      },
+      {
+        "question": "Do you rebuild products from scratch?",
+        "answer": "No. LaunchRefined is focused on refinement, not full rebuilds. The goal is to improve what already works."
+      },
+      {
+        "question": "Do you fix performance issues too?",
+        "answer": "Yes. Performance, responsiveness, and perceived speed are part of the refinement process because they directly affect trust and conversion."
+      },
+      {
+        "question": "Do you also create landing pages?",
+        "answer": "Yes. The Validated MVP Upgrade can include landing improvement or a new conversion-focused landing."
+      },
+      {
+        "question": "How do you define scope?",
+        "answer": "Scope is defined around the highest-impact screens, flows, and issues for the current stage of the product. This keeps engagements focused and efficient."
+      },
+      {
+        "question": "Do you offer ongoing support?",
+        "answer": "Possibly, after a successful sprint. The priority is first to improve the product through a focused engagement."
+      },
+      {
+        "question": "What happens after I apply?",
+        "answer": "I review your submission, assess fit, and reply with next steps. If it is a strong fit, we move into an audit or a scoped sprint conversation."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Apply",
+    "description": "Fill out a short request and I’ll review whether an Audit, a Sprint, or the full Upgrade is the right fit.",
+    "responseTimeLabel": "Response time",
+    "responseTime": "Typically within 1 to 2 business days",
+    "cta": "Apply for LaunchRefined"
+  },
+  "footerTagline": "Product refinement for validated MVPs"
+}

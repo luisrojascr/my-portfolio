@@ -14,6 +14,12 @@ module.exports = {
         darkText: '#E4E6EB',
         dark: '#121212',
         light: '#fafafa',
+        /** Main CTA fill only — #81c8e0 + text/hover helpers */
+        brand: {
+          DEFAULT: '#81c8e0',
+          foreground: '#0a1e24',
+          muted: '#6bb8d4',
+        },
       },
       keyframes: {
         wave: {

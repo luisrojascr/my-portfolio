@@ -1,0 +1,228 @@
+{
+  "seo": {
+    "title": "LaunchRefined — Luis Rojas",
+    "description": "Refinamiento de producto para MVPs validados hechos con Base44, Lovable, Bolt, v0 y similares. Auditorías, sprints y upgrades: UX, rendimiento y confianza."
+  },
+  "hero": {
+    "eyebrow": "Refinamiento de apps con IA para lanzamientos serios",
+    "title": "Tu MVP en Base44 o Lovable funciona. Ahora haz que se sienta creíble.",
+    "description1": "Las herramientas de IA te llevan rápido a un producto que funciona. Lo que suelen no darte es criterio de producto: claridad, pulido, velocidad y señales de confianza para que los usuarios se queden, entiendan y conviertan.",
+    "description2": "Ayudo a founders a refinar apps hechas con IA hasta productos que se sienten intencionales, usables, rápidos y listos para mostrar.",
+    "primaryCta": "Empezar con una auditoría",
+    "secondaryCta": "Ver servicios",
+    "visualCaption": "Antes → después: de wireframe a pulido listo para producción",
+    "imageAlt": "Ilustración de UI de producto refinado: mockups de dashboard en capas que sugieren una app pulida y creíble tras el refinamiento"
+  },
+  "gap": {
+    "title": "La brecha entre “funciona” y “se siente listo”",
+    "description": "La mayoría de apps generadas con IA son lo bastante funcionales para un demo, pero siguen flojas donde más importa cuando llegan usuarios reales.",
+    "items": {
+      "genericUx": {
+        "title": "UX genérico",
+        "description": "La app funciona a nivel técnico, pero la experiencia se siente plantilla, inconsistente o poco memorable."
+      },
+      "weakHierarchy": {
+        "title": "Jerarquía de producto débil",
+        "description": "Las acciones importantes no destacan, las pantallas compiten por atención y el usuario no sabe qué importa."
+      },
+      "trustFriction": {
+        "title": "Fricción de confianza",
+        "description": "Detalles pequeños transmiten riesgo: espaciado raro, copy inconsistente, estados rotos y flujos que parecen a medias."
+      },
+      "conversionLeakage": {
+        "title": "Pérdida de conversión",
+        "description": "La gente abandona porque el producto se siente poco claro, débil, lento o poco creíble."
+      },
+      "performanceFriction": {
+        "title": "Freno de rendimiento",
+        "description": "Cargas lentas, interacciones entrecortadas y un móvil tosco hacen que el producto se sienta frágil y bajan la confianza al instante."
+      }
+    }
+  },
+  "refinement": {
+    "title": "Refinamiento, no reconstrucción",
+    "description": "No siempre hace falta tirar la versión generada con IA y empezar de cero. Muchas veces el camino más rápido es conservar lo que ya funciona y mejorar lo que afecta percepción, usabilidad, velocidad y conversión.",
+    "items": {
+      "uiPolish": {
+        "title": "Pulido de UI",
+        "description": "Afinar espaciado, jerarquía, consistencia visual y estados para que el producto se sienta diseñado, no ensamblado."
+      },
+      "uxClarity": {
+        "title": "Claridad de UX",
+        "description": "Hacer flujos más fáciles de seguir, reducir la duda y ayudar al usuario a saber qué hacer después."
+      },
+      "flowOptimization": {
+        "title": "Optimización de flujos",
+        "description": "Quitar fricción innecesaria en onboarding, formularios y rutas clave de conversión."
+      },
+      "performance": {
+        "title": "Rendimiento y capacidad de respuesta",
+        "description": "Mejorar la velocidad percibida, la fluidez de las interacciones y la capacidad de respuesta donde más impacta la confianza."
+      },
+      "productionCleanup": {
+        "title": "Limpieza pensando en producción",
+        "description": "Atender casos límite, interacciones toscas, estados de carga y los detalles que rompen la confianza en uso real."
+      }
+    }
+  },
+  "who": {
+    "title": "Para quién es",
+    "description": "LaunchRefined es un servicio exclusivo para founders, operadores y equipos pequeños que avanzaron rápido con Base44, Lovable, Bolt o v0 y ahora necesitan que el producto aguante frente a clientes, inversores o stakeholders internos.",
+    "bullets": {
+      "mvp": "Ya tienes un MVP o prototipo funcionando",
+      "premium": "Quieres que el producto se sienta más premium y confiable",
+      "focused": "Necesitas refinamiento enfocado, no meses de rediseño",
+      "cares": "Te importan la calidad visual y la UX funcional",
+      "readiness": "Quieres mejor rendimiento, interacciones más fluidas y una conversión más sólida"
+    }
+  },
+  "outcomes": {
+    "title": "Qué cambia después del refinamiento",
+    "items": {
+      "deliberate": "El producto se siente más intencional",
+      "understand": "Los usuarios entienden el flujo más rápido",
+      "complete": "Las acciones clave son más fáciles de completar",
+      "trustworthy": "La app se ve más confiable en demos y en uso real",
+      "fasterSmoother": "La experiencia se siente más rápida y fluida",
+      "aiSpeed": "Mantienes la velocidad de la IA, pero reduces el costo de la ejecución tosca"
+    }
+  },
+  "engagements": {
+    "title": "Servicios",
+    "includedLabel": "Qué incluye",
+    "timelineLabel": "Plazo",
+    "priceLabel": "Precio",
+    "audit": {
+      "label": "Auditoría",
+      "title": "Auditoría MVP Polish",
+      "description": "Revisión enfocada de tu producto actual con recomendaciones claras sobre UX, calidad de interfaz, rendimiento, brechas de confianza y bloqueos de conversión.",
+      "bestFor": "Ideal para equipos que quieren dirección clara antes de invertir en cambios",
+      "included": [
+        "Revisión de pantallas y flujos clave",
+        "Análisis de UX, UI, rendimiento y confianza",
+        "Hallazgos priorizados",
+        "Próximos pasos recomendados",
+        "Resumen asíncrono con orientación accionable"
+      ],
+      "timeline": "1 a 2 días hábiles",
+      "price": "$195",
+      "cta": "Solicitar auditoría"
+    },
+    "sprint": {
+      "label": "Sprint",
+      "title": "Sprint de refinamiento de producto",
+      "description": "Un engagement corto y de alto impacto para mejorar las pantallas, flujos y detalles que hacen que el producto se sienta más pulido, usable, rápido y listo para lanzar.",
+      "bestFor": "Ideal para equipos que necesitan mejoras tangibles rápido",
+      "included": [
+        "Mejoras de UX en flujos críticos",
+        "Pulido de UI y limpieza de jerarquía",
+        "Refinamiento responsive",
+        "Mejoras en estados de carga, vacío y error",
+        "Mejoras de rendimiento y capacidad de respuesta",
+        "Corrección de los problemas de confianza más visibles"
+      ],
+      "timeline": "5 a 7 días hábiles",
+      "price": "Desde $1,500",
+      "cta": "Agendar llamada de sprint"
+    },
+    "upgrade": {
+      "label": "Upgrade",
+      "title": "Upgrade de MVP validado",
+      "description": "Un engagement más completo que combina estrategia y ejecución para refinar el producto y mejorar cómo se presenta.",
+      "bestFor": "Ideal para founders que quieren que el producto y la presentación estén a la altura de la ambición",
+      "included": [
+        "Auditoría MVP Polish",
+        "Sprint de refinamiento de producto",
+        "Mejora de landing o nueva landing enfocada en conversión",
+        "Presentación de producto más clara y señales de confianza más fuertes en toda la experiencia"
+      ],
+      "timeline": "7 a 14 días hábiles",
+      "price": "Desde $2,800",
+      "cta": "Hablar del upgrade"
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "steps": [
+      {
+        "title": "Auditoría",
+        "description": "Reviso el producto, identifico los temas de mayor impacto y señalo qué está afectando claridad, confianza, velocidad y conversión."
+      },
+      {
+        "title": "Priorizar",
+        "description": "Definimos las correcciones más importantes para la etapa actual del producto. Sin roadmaps vagos: prioridades enfocadas."
+      },
+      {
+        "title": "Refinar",
+        "description": "Mejoro el producto donde más importa: estructura, pulido, interacciones, rendimiento y flujos críticos de conversión."
+      },
+      {
+        "title": "Entregar",
+        "description": "Obtienes una versión que se siente más clara, sólida, rápida y creíble sin convertir todo el proyecto en un rebuild."
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre mí",
+    "imageAlt": "Luis Rojas — ingeniero de software y fundador de LaunchRefined",
+    "p1": "Soy Luis Rojas, ingeniero de software con más de 10 años construyendo y mejorando aplicaciones reales usadas por miles de personas.",
+    "p2": "La mayoría de MVPs validados no necesitan un rebuild: necesitan UX más afilada, mejor rendimiento y señales de confianza más fuertes. Ahí es donde me enfoco.",
+    "p3": "Trabajas directamente conmigo. Sin capas, sin reenvíos, sin procesos hinchados: ejecución enfocada en lo que de verdad mejora el producto."
+  },
+  "typicalIssues": {
+    "title": "Problemas típicos que corrijo",
+    "items": [
+      "UI y espaciado inconsistentes",
+      "Jerarquía visual débil",
+      "Onboarding incómodo",
+      "Estructura de CTAs poco clara",
+      "Interacciones lentas o entrecortadas",
+      "Poco pulido en móvil",
+      "Estados de carga o vacíos rotos",
+      "Detalles que rompen la confianza en la interfaz",
+      "Fricción de conversión en flujos clave",
+      "Landings genéricas que no venden el producto"
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Solo trabajas con productos Base44?",
+        "answer": "No. También trabajo con productos hechos con Lovable, Bolt, v0 y otros stacks modernos. Base44 es solo uno de los ejemplos más claros de este mercado."
+      },
+      {
+        "question": "¿Reconstruyes productos desde cero?",
+        "answer": "No. LaunchRefined va de refinamiento, no de rebuilds completos. El objetivo es mejorar lo que ya funciona."
+      },
+      {
+        "question": "¿También arreglas temas de rendimiento?",
+        "answer": "Sí. Rendimiento, capacidad de respuesta y velocidad percibida forman parte del refinamiento porque afectan directamente la confianza y la conversión."
+      },
+      {
+        "question": "¿También creas landings?",
+        "answer": "Sí. El Upgrade de MVP validado puede incluir mejora de landing o una nueva landing enfocada en conversión."
+      },
+      {
+        "question": "¿Cómo defines el alcance?",
+        "answer": "El alcance se define alrededor de las pantallas, flujos y temas de mayor impacto para la etapa actual del producto. Así los engagements se mantienen enfocados y eficientes."
+      },
+      {
+        "question": "¿Ofreces soporte continuo?",
+        "answer": "Posiblemente, después de un sprint exitoso. La prioridad es primero mejorar el producto con un engagement enfocado."
+      },
+      {
+        "question": "¿Qué pasa después de aplicar?",
+        "answer": "Reviso tu solicitud, evalúo encaje y respondo con próximos pasos. Si hay buen encaje, pasamos a una auditoría o a una conversión de sprint acotado."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Aplicar",
+    "description": "Completa una solicitud breve y revisaré si una auditoría, un sprint o el upgrade completo encajan mejor.",
+    "responseTimeLabel": "Tiempo de respuesta",
+    "responseTime": "Normalmente en 1 a 2 días hábiles",
+    "cta": "Aplicar a LaunchRefined"
+  },
+  "footerTagline": "Refinamiento de producto para MVPs validados"
+}

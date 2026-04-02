@@ -29,7 +29,7 @@ const Services = () => {
         <Link
           href='/contact'
           data-umami-event='Click Contact Button'
-          className='inline-flex w-fit items-center gap-2 rounded-lg bg-neutral-500 px-4 py-2 text-[15px] text-neutral-50 transition-all duration-300 hover:bg-neutral-600 dark:bg-neutral-600 dark:hover:bg-neutral-700'
+          className='inline-flex w-fit items-center gap-2 rounded-lg bg-brand px-4 py-2 text-[15px] font-medium text-brand-foreground transition-all duration-300 hover:bg-brand-muted dark:bg-brand dark:hover:bg-brand-muted'
         >
           {t('introduction.contactMe')}
         </Link>
