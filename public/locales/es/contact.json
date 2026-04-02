@@ -14,7 +14,9 @@
     "nameRequired": "El nombre es requerido",
     "emailRequired": "El correo electrónico es requerido",
     "emailInvalid": "Por favor ingresa un correo válido",
-    "messageRequired": "El mensaje es requerido"
+    "messageRequired": "El mensaje es requerido",
+    "validationHint": "Completa todos los campos obligatorios antes de enviar.",
+    "missingConfig": "El formulario no está configurado. Añade NEXT_PUBLIC_CONTACT_FORM_API_KEY al entorno."
   },
   "info": {
     "email": "Correo electrónico",

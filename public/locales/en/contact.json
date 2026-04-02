@@ -14,7 +14,9 @@
     "nameRequired": "Name is required",
     "emailRequired": "Email is required",
     "emailInvalid": "Please enter a valid email",
-    "messageRequired": "Message is required"
+    "messageRequired": "Message is required",
+    "validationHint": "Please complete all required fields before sending.",
+    "missingConfig": "Contact form is not configured. Add NEXT_PUBLIC_CONTACT_FORM_API_KEY to your environment."
   },
   "info": {
     "email": "Email",

@@ -109,7 +109,8 @@ GITHUB_READ_USER_TOKEN_WORK=
 # Prisma / PostgreSQL
 DATABASE_URL='postgres://USER:PASSWORD@HOST:5432/postgres'
 
-# Contact form (e.g. Web3Forms)
+# Contact form (Web3Forms — browser submit uses NEXT_PUBLIC_*; optional server key for /api/contact + IP allowlist)
+NEXT_PUBLIC_CONTACT_FORM_API_KEY=
 CONTACT_FORM_API_KEY=
 
 # Firebase (guestbook)
