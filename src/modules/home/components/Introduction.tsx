@@ -15,8 +15,13 @@ const Introduction = () => {
             <li>
               {t('introduction.location')} <span className='ml-1'>🇨🇷</span>
             </li>
-            <li>{t('introduction.position')}&nbsp;
-              <a href="https://www.petsmart.com/" target="_blank">
+            <li>
+              {t('introduction.position')}&nbsp;
+              <a
+                href='https://www.petsmart.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <span className='cursor-pointer underline-offset-2 hover:text-dark hover:underline hover:dark:text-white'>
                   {t('introduction.company')}
                 </span>

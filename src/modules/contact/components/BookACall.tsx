@@ -11,6 +11,7 @@ const BookACall = () => {
       <Link
         href='https://cal.com/luisrojascr/30min'
         target='_blank'
+        rel='noopener noreferrer'
         data-aos-duration='1000'
         className='flex cursor-pointer flex-col space-y-5 rounded-2xl border bg-white bg-gradient-to-tr px-6 py-5 transition-all duration-300 hover:scale-[101%] hover:shadow-sm dark:border-teal-500 dark:from-teal-950 dark:to-teal-800 dark:text-white'
       >

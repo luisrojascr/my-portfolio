@@ -6,6 +6,7 @@ import BackButton from '@/common/components/elements/BackButton';
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import { PROJECTS } from '@/common/constant/projects';
+import { absoluteUrl, SITE_NAME, SITE_URL } from '@/common/constant/site';
 import { ProjectItemProps } from '@/common/types/projects';
 import ProjectDetail from '@/modules/projects/components/ProjectDetail';
 
@@ -17,12 +18,13 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
   const PAGE_TITLE = project?.title;
   const PAGE_DESCRIPTION = project?.description;
 
-  const canonicalUrl = `https://luisrojascr.netlify.app/project/${project?.slug}`;
+  const canonicalUrl = `${SITE_URL}/projects/${project?.slug}`;
+  const ogImage = absoluteUrl(project?.image);
 
   return (
     <>
       <NextSeo
-        title={`${project?.title} - Project Luis Rojas`}
+        title={`${project?.title} — Project`}
         description={project?.description}
         canonical={canonicalUrl}
         openGraph={{
@@ -30,15 +32,11 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
           article: {
             publishedTime: project?.updated_at.toString(),
             modifiedTime: project?.updated_at.toString(),
-            authors: ['Luis Rojas'],
+            authors: [SITE_NAME],
           },
           url: canonicalUrl,
-          images: [
-            {
-              url: project?.image,
-            },
-          ],
-          siteName: 'Blog Luis Rojas',
+          images: [{ url: ogImage, alt: project?.title }],
+          siteName: SITE_NAME,
         }}
       />
       <Container data-aos='fade-up'>
@@ -53,7 +51,9 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
 export default ProjectsDetailPage;
 
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
-  const project = PROJECTS.find((project) => project.slug === String(params?.slug));
+  const project = PROJECTS.find(
+    (project) => project.slug === String(params?.slug),
+  );
 
   if (!project) {
     return {
@@ -75,16 +75,17 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-  const paths = locales?.reduce<{ params: { slug: string }; locale: string }[]>(
-    (acc, locale) => [
-      ...acc,
-      ...PROJECTS.map((project) => ({
-        params: { slug: project.slug },
-        locale,
-      })),
-    ],
-    []
-  ) || [];
+  const paths =
+    locales?.reduce<{ params: { slug: string }; locale: string }[]>(
+      (acc, locale) => [
+        ...acc,
+        ...PROJECTS.map((project) => ({
+          params: { slug: project.slug },
+          locale,
+        })),
+      ],
+      [],
+    ) || [];
 
   return {
     paths,

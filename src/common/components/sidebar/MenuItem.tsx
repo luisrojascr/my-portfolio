@@ -83,7 +83,9 @@ const MenuItem = ({
   ) : (
     <Link
       href={href}
-      target={isExternalUrl ? '_blank' : ''}
+      {...(isExternalUrl
+        ? { target: '_blank' as const, rel: 'noopener noreferrer' }
+        : {})}
       onClick={handleClick}
     >
       {itemComponent()}

@@ -9,7 +9,7 @@ import Dashboard from '@/modules/dashboard';
 const DashboardPage: NextPage = () => {
   return (
     <>
-      <NextSeo title='Dashboard - Luis Rojas' />
+      <NextSeo title='Dashboard — Luis Rojas' noindex nofollow />
       <Container data-aos='fade-up'>
         <PageHeading title='Dashboard' description='Personal dashboard' />
         <Dashboard />

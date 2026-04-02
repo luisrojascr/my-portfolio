@@ -2,6 +2,12 @@
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /es/dashboard
+
 # Host
 Host: https://luisrojascr.netlify.app
 
