@@ -1,7 +1,7 @@
 import Image from '@/common/components/elements/Image';
 import MDXComponent from '@/common/components/elements/MDXComponent';
 import Tooltip from '@/common/components/elements/Tooltip';
-import { STACKS } from '@/common/constant/stacks';
+import { getProjectStackIcon } from '@/common/constant/stacks';
 import { ProjectItemProps } from '@/common/types/projects';
 
 import ProjectLink from './ProjectLink';
@@ -26,7 +26,7 @@ const ProjectDetail = ({
           <div className='flex flex-wrap items-center gap-3'>
             {stacksArray?.map((stack: string, index: number) => (
               <div key={index}>
-                <Tooltip title={stack}>{STACKS[stack]}</Tooltip>
+                <Tooltip title={stack}>{getProjectStackIcon(stack)}</Tooltip>
               </div>
             ))}
           </div>

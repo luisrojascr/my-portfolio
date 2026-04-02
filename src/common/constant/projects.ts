@@ -5,14 +5,30 @@ export const PROJECTS: ProjectItemProps[] = [
     title: 'Oppy Hound App',
     slug: 'oppy-hound-app',
     description:
-      'A Next.js web application for federal contracting teams to search SAM.gov-style opportunities, manage watchlists, and use AI-assisted chat and deep-dive analysis, with subscriptions and integrations for auth, search, and marketing.',
+      'A Next.js web application for federal contracting teams to search SAM.gov-style opportunities, manage watchlists, AI-assisted chat and deep-dive analysis.',
     image: '/images/projects/portfolio-oppyhound.png',
     link_demo: 'https://oppyhound.com/',
     link_github: '',
     stacks:
-      '["Next.js 15", "TypeScript", "React", "Material UI v7", "MUI X Pro", "Redux Toolkit", "AWS Amplify", "AppSync GraphQL", "DynamoDB", "AWS Cognito", "JWT (jose)", "OAuth (Google, LinkedIn)", "Elasticsearch", "Stripe", "Dexie.js", "HubSpot", "Jest", "React Testing Library"]',
+      '["Next.js", "TypeScript", "React", "Material UI", "Redux Toolkit", "AWS Amplify", "AppSync GraphQL", "DynamoDB", "AWS Cognito", "JWT (jose)", "OAuth (Google, LinkedIn)", "Elasticsearch", "Stripe", "Dexie.js", "HubSpot", "Jest", "React Testing Library"]',
     content:
       'GovBidAI (production app: Oppyhound) is a federal contracting platform built on Next.js 15 with the Pages Router and TypeScript. It combines opportunity discovery and lookup (backed by Elasticsearch on the SAM-style index), user accounts and company profiles stored in DynamoDB via Amplify AppSync GraphQL, and client-side caching with Dexie in IndexedDB. Authentication uses Cognito and social OAuth, with JWTs in HTTP-only cookies and centralized route protection via server-side helpers. The UI is built with Material UI and MUI X Pro; global state uses Redux Toolkit and custom middleware for chat and membership sync. Stripe powers subscriptions and purchases; HubSpot and UserFlow support marketing and onboarding. Jest and React Testing Library cover unit and component tests, with E2E automation in a separate repository. The stack is deployed on AWS Amplify Hosting with environment-specific configuration and documented auth, Stripe webhook, and Amplify workflows.',
+    is_show: true,
+    is_featured: true,
+    updated_at: new Date('2026-04-02'),
+  },
+  {
+    title: 'Bee Setups Inventory App',
+    slug: 'bee-setups-inventory-app',
+    description:
+      'Bee Setups Operations Portal — Built in Base44, a field management app for tracking property setup projects, inventory checklists, and technician assignments.',
+    image: '/images/projects/portfolio-beesetups-inventory.png',
+    link_demo: 'https://inventory.beesetups.com/',
+    link_github: '',
+    stacks:
+      '["Base44 SDK", "React", "Vite", "Tailwind", "shadcn/ui + Radix UI ", "React Router v6", "TanStack React Query v5", "date-fns", "Lucide React", "Framer Motion", "jsPDF"]',
+    content:
+      "Bee Setups Operations Portal is an internal tool built for managing short-term rental property setup operations. Admins can create and assign projects to technicians, upload inventory templates (Furniture, Essentials, Extras), and monitor item status in real time. Technicians use the app on-site to check off inventory items, flag missing or damaged pieces with photos, and complete walkthroughs — giving the entire team full visibility into every project's progress from start to finish.",
     is_show: true,
     is_featured: true,
     updated_at: new Date('2026-04-02'),
