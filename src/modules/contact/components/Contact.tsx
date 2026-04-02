@@ -2,7 +2,6 @@ import { useTranslation } from 'next-i18next';
 
 import Breakline from '@/common/components/elements/Breakline';
 
-import BookACall from './BookACall';
 import ContactForm from './ContactForm';
 import SocialMediaList from './SocialMediaList';
 

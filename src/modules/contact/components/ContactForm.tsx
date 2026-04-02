@@ -99,9 +99,7 @@ const ContactForm = () => {
           required
         />
         <Button
-          className={clsx(
-            'flex justify-center bg-neutral-800 py-2.5 hover:scale-[101%] hover:bg-neutral-900 dark:bg-neutral-50 dark:text-neutral-950 hover:dark:bg-neutral-50',
-          )}
+          className={clsx('flex justify-center py-2.5')}
           type='submit'
           icon={<></>}
           data-umami-event='Send Contact Message'
@@ -114,7 +112,8 @@ const ContactForm = () => {
       <div className='my-5 flex items-center gap-2 dark:text-neutral-400'>
         <ClockIcon />
         <div className='text-sm'>
-          <span className='font-medium'>{ t('info.response')}:</span> 1-2 Hours (Time zone CST/GMT-6)
+          <span className='font-medium'>{t('info.response')}:</span> 1-2 Hours
+          (Time zone CST/GMT-6)
         </div>
       </div>
     </form>
