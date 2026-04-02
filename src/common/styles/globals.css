@@ -52,3 +52,57 @@ a {
 ::-webkit-scrollbar-thumb {
   @apply rounded-[3px] border-2 border-neutral-300 bg-neutral-600 dark:bg-neutral-400;
 }
+
+/* Lightweight AOS-compatible animations (replaces aos library) */
+@keyframes aos-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aos-flip-right {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateY(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0);
+  }
+}
+
+@keyframes aos-flip-up {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0);
+  }
+}
+
+[data-aos='fade-up'] {
+  animation: aos-fade-up 0.6s ease forwards;
+}
+
+[data-aos='flip-right'] {
+  animation: aos-flip-right 0.6s ease forwards;
+}
+
+[data-aos='flip-up'] {
+  animation: aos-flip-up 0.6s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

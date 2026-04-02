@@ -1,8 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 
-import useIsMobile from '@/common/hooks/useIsMobile';
-
 import Breakline from '../../elements/Breakline';
 import LanguageSwitcher from '../../elements/LanguageSwitcher';
 import ThemeSwitcher from '../../elements/ThemeSwitcher';
@@ -10,7 +8,6 @@ import Navigation from '../../sidebar/Navigation';
 import Profile from '../../sidebar/Profile';
 
 const Sidebar = () => {
-  const isMobile = useIsMobile();
   const { t } = useTranslation('common');
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,27 +32,25 @@ const Sidebar = () => {
       className='sticky top-0 z-10 flex flex-col space-y-6 transition-all duration-300 lg:py-6'
     >
       <Profile isScrolled={isScrolled} />
-      {!isMobile && (
-        <div className='space-y-3'>
-          {/* <div className='pb-1'>
-            <SearchBox />
-          </div> */}
-          <Navigation />
-          <Breakline className='mx-1' />
-          <div className='space-y-2.5 px-1'>
-            <div className='px-3'>
-              <span className='text-sm text-neutral-600'>{t('language')}</span>
-            </div>
-            <LanguageSwitcher />
+      <div className='hidden space-y-3 lg:block'>
+        {/* <div className='pb-1'>
+          <SearchBox />
+        </div> */}
+        <Navigation />
+        <Breakline className='mx-1' />
+        <div className='space-y-2.5 px-1'>
+          <div className='px-3'>
+            <span className='text-sm text-neutral-600'>{t('language')}</span>
           </div>
-          <div className='space-y-2.5 px-1'>
-            <div className='px-3'>
-              <span className='text-sm text-neutral-600'>{t('theme')}</span>
-            </div>
-            <ThemeSwitcher />
-          </div>
+          <LanguageSwitcher />
         </div>
-      )}
+        <div className='space-y-2.5 px-1'>
+          <div className='px-3'>
+            <span className='text-sm text-neutral-600'>{t('theme')}</span>
+          </div>
+          <ThemeSwitcher />
+        </div>
+      </div>
     </div>
   );
 };

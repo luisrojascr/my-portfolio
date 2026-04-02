@@ -16,14 +16,7 @@ interface ProfileProps {
 
 const Profile = ({ isScrolled = false }: ProfileProps) => {
   const isMobile = useIsMobile();
-
-  const getImageSize = () => {
-    let size = isMobile ? 40 : 80;
-    if (!isMobile && isScrolled) {
-      size = 0;
-    }
-    return size;
-  };
+  const imageSize = isMobile ? 40 : 80;
 
   const [expandMenu, setExpandMenu] = useState<boolean>(false);
 
@@ -52,7 +45,11 @@ const Profile = ({ isScrolled = false }: ProfileProps) => {
         )}
       >
         <div className='flex items-start justify-between lg:flex-col lg:space-y-4'>
-          <ProfileHeader expandMenu={expandMenu} imageSize={getImageSize()} />
+          <ProfileHeader
+            expandMenu={expandMenu}
+            imageSize={imageSize}
+            isScrolled={isScrolled}
+          />
           {/* <ProfileHeader expandMenu={expandMenu} imageSize={55} /> */}
 
           {isMobile && (

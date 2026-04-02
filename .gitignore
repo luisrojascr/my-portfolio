@@ -32,3 +32,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# prisma (generated client, created by postinstall / prisma generate)
+/src/generated
+
+# Local Netlify folder
+.netlify

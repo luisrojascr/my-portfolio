@@ -9,7 +9,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <NextSeo title='Luis Rojas - Personal Website' />
-      <Container data-aos='fade-up'>
+      <Container>
         <Home />
       </Container>
     </>

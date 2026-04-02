@@ -1,7 +1,11 @@
+import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 
 import SectionHeading from '@/common/components/elements/SectionHeading';
-import Skills from '@/modules/about/components/Skills';
+
+const Skills = dynamic(() => import('@/modules/about/components/Skills'), {
+  ssr: false,
+});
 
 const SkillsSection = () => {
   const { t } = useTranslation('home');

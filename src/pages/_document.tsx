@@ -4,12 +4,21 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
+        {/* Preload LCP image as early as possible */}
+        <link
+          rel='preload'
+          href='/images/luis-rojas-foto-v2.png'
+          as='image'
+          fetchPriority='high'
+        />
+        <meta name='theme-color' content='#121212' />
         {/* <script
           async
           defer
           src='https://analytics.aulianza.com/script.js'
           data-website-id='5a78190a-bdad-48a4-901a-c7400be41ca6'
         ></script> */}
+        {/* Favicons and manifest last — non-critical */}
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -27,13 +36,12 @@ export default function Document() {
           sizes='16x16'
           href='/favicon/favicon-16x16.png'
         />
-        <link rel='manifest' href='/favicon/site.webmanifest' />
         <link
           rel='mask-icon'
           href='/favicon/safari-pinned-tab.svg'
           color='#121212'
         />
-        <meta name='theme-color' content='#121212' />
+        <link rel='manifest' href='/favicon/site.webmanifest' />
       </Head>
       <body>
         <Main />

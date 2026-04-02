@@ -11,27 +11,27 @@ const Tag = memo(({ icon, title }: { icon: ReactNode; title: string }) => (
   </div>
 ));
 
+Tag.displayName = 'Tag';
+
 const Skills = () => {
-  const [shuffledSkills, setShuffledSkills] = useState<
-    Array<[string, ReactNode]>
-  >([]);
+  const [sliders, setSliders] = useState<ReactNode[]>([]);
 
   useEffect(() => {
-    const skillsArray = Object.entries(STACKS);
-    const shuffledArray = [...skillsArray].sort(() => Math.random() - 0.5);
-    setShuffledSkills(shuffledArray);
-  }, []);
-
-  const sliders = Array.from({ length: 3 }, (_, index) => {
-    const sliderSkills = [...shuffledSkills].sort(() => Math.random() - 0.5);
-    return (
-      <InfiniteLoopSlider key={index} isReverse={index === 1}>
-        {sliderSkills.map(([title, icon], index) => (
-          <Tag key={index} icon={icon} title={title} />
-        ))}
-      </InfiniteLoopSlider>
+    const allSkills = [...Object.entries(STACKS)].sort(
+      () => Math.random() - 0.5,
     );
-  });
+    const built = Array.from({ length: 3 }, (_, index) => {
+      const sliderSkills = [...allSkills].sort(() => Math.random() - 0.5);
+      return (
+        <InfiniteLoopSlider key={index} isReverse={index === 1}>
+          {sliderSkills.map(([title, icon], i) => (
+            <Tag key={i} icon={icon} title={title} />
+          ))}
+        </InfiniteLoopSlider>
+      );
+    });
+    setSliders(built);
+  }, []);
 
   return (
     <div className='space-y-8'>

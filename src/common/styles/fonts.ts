@@ -1,28 +1,22 @@
-import { Fira_Code, Onest, Plus_Jakarta_Sans, Sora } from 'next/font/google';
-
-export const jakartaSans = Plus_Jakarta_Sans({
-  variable: '--jakartaSans-font',
-  subsets: ['latin'],
-  display: 'fallback',
-  weight: ['400', '500', '600', '700', '800'],
-});
+import { Fira_Code, Onest, Sora } from 'next/font/google';
 
 export const firaCode = Fira_Code({
-  variable: '--font-fira-code',
+  variable: '--firaCode-font',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500', '700'],
 });
 
 export const soraSans = Sora({
   variable: '--soraSans-font',
   subsets: ['latin'],
-  display: 'fallback',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const onestSans = Onest({
   variable: '--onestSans-font',
   subsets: ['latin'],
-  display: 'fallback',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });

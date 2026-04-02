@@ -1,8 +1,7 @@
 import clsx from 'clsx';
+import NextImage from 'next/image';
 import Link from 'next/link';
 import { MdVerified as VerifiedIcon } from 'react-icons/md';
-
-import Image from '../elements/Image';
 
 interface ProfileHeaderProps {
   expandMenu: boolean;
@@ -10,7 +9,13 @@ interface ProfileHeaderProps {
   isScrolled?: boolean;
 }
 
-const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
+const ProfileHeader = ({
+  expandMenu,
+  imageSize,
+  isScrolled = false,
+}: ProfileHeaderProps) => {
+  const size = imageSize || 80;
+
   return (
     <div
       className={clsx(
@@ -18,14 +23,23 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
         expandMenu && 'flex-col !items-start',
       )}
     >
-      <Image
-        src='/images/luis-rojas-foto-v2.png'
-        alt='Luis Rojas'
-        width={expandMenu ? 80 : imageSize}
-        height={expandMenu ? 80 : imageSize}
-        rounded='rounded-full'
-        className='rotate-3 dark:border-neutral-600 lg:hover:scale-105'
-      />
+      <div
+        className={clsx(
+          'overflow-hidden rounded-full transition-all duration-300',
+          !expandMenu && isScrolled ? 'h-0 w-0 opacity-0' : 'opacity-100',
+        )}
+      >
+        <NextImage
+          src='/images/luis-rojas-foto-v2.png'
+          alt='Luis Rojas'
+          width={size}
+          height={size}
+          priority
+          fetchPriority='high'
+          quality={90}
+          className='rotate-3 lg:hover:scale-105'
+        />
+      </div>
       <>
         <div className='mt-1 flex items-center gap-2 lg:mt-4'>
           <Link href='/' passHref>

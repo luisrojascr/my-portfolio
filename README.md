@@ -1,152 +1,97 @@
 <div align="center">
-  <h1>luisrojascr Portfolio Site</h1>
-  <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Firebase and Prisma with PostgreSQL</p>
-
-[![GitHub Repo stars](https://img.shields.io/github/stars/aulianza/aulianza.id)](https://github.com/aulianza/aulianza.id/stargazers)
-[![Depfu](https://badges.depfu.com/badges/02483ebb21fdb2182a66a28b68d1b7b0/status.svg)](https://depfu.com)
-[![Depfu](https://badges.depfu.com/badges/02483ebb21fdb2182a66a28b68d1b7b0/overview.svg)](https://depfu.com/github/aulianza/aulianza.id?project_id=38809)
-[![Depfu](https://badges.depfu.com/badges/02483ebb21fdb2182a66a28b68d1b7b0/count.svg)](https://depfu.com/github/aulianza/aulianza.id?project_id=38809)
-[![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
-
+  <h1>luisrojascr — Portfolio</h1>
+  <p>Personal site built with Next.js, TypeScript, Tailwind CSS, SWR, Firebase, and Prisma with PostgreSQL.</p>
 </div>
+
 <br />
 
 ## Introduction
 
-This website was carefully crafted from the ground using Next.js and other helpful tools, starting in June 2023.
+This project is a portfolio and blog: dashboard stats (WakaTime, GitHub contributions, Spotify), projects from PostgreSQL via Prisma, blog content from a WordPress headless API, and optional integrations (DEV.to, Firebase guestbook, OpenAI in the command palette).
 
-I'm constantly making improvements to add more features and content. This website is where I share what I've learned and offer insights to others.
+The app uses the **Pages Router** (`src/pages`), **next-i18next** for English/Spanish, and **Next.js API routes** as serverless handlers for data fetching. **There is no user login**; GitHub data uses **read tokens** (`GITHUB_READ_USER_TOKEN_*`) for the GraphQL API, not OAuth sign-in.
 
-Feel free to use this website as a reference, for inspiration, or as a template, following the provided license. You can access the source code to customize it to your needs.
+<br />
 
-If you find this website helpful, please consider leaving a rating. 😎👍🏻
+## Tech stack
 
-If you have any questions, suggestions, or anything else, don't hesitate to reach out to me! 🧑‍💻
-<br /><br />
+| Area | Details |
+|------|---------|
+| Framework | **Next.js 16** (Turbopack in dev), **React 19** |
+| Language | **TypeScript** (~5.7) |
+| Styling | **Tailwind CSS** 3 |
+| Data / ORM | **Prisma** + **PostgreSQL** |
+| HTTP client | **Fetch** (native; no Axios) |
+| Remote data | **SWR**, **next-seo**, **next-sitemap** |
+| i18n | **next-i18next** / **i18next** |
+| UI / motion | **Framer Motion**, **React Icons**, **Headless UI** |
+| Content | **react-markdown**, **remark** / **remark-gfm** |
+| Realtime / extras | **Firebase** (guestbook), **Monaco** (JS playground) |
+| State | **Zustand** |
+| Quality | **ESLint 9** (`eslint.config.mjs` + `eslint-config-next`), **Prettier**, **Husky**, **lint-staged**, **Commitlint** |
+| Tests | **Jest**, **Testing Library** |
 
-## Tech Stack
-
-This website is built using these technologies:
-
-- ◼️ Next.js 13.5.6
-- ⚛️ React 18
-- 🔰 TypeScript
-- 💠 Tailwind CSS 3
-- 🗂 Prisma Client
-- 🔥 Firebase
-- 🦫 Zustand
-- 〰️ SWR
-- ➰ Framer Motion
-- 💢 React Icons
-- 🛢 Jest
-- 🧿 Absolute Import and Path Alias
-- 📏 ESLint
-- ✨ Prettier
-- 🐶 Husky & Lint Staged
-- 📌 Conventional Commit Lint
+Path alias: `@/*` → `src/*` (see `tsconfig.json`).
 
 <br />
 
 ## Features
 
-On this website there are several features that will continue to be updated and added in the future.
+- **Command palette (⌘K)** — navigation; optional OpenAI wiring via `OPENAI_API_KEY` (feature may be disabled/unconfigured).
+- **JavaScript playground** — live editor (Monaco).
+- **Guestbook** — Firebase realtime chat.
+- **Spotify “now playing”** — Spotify Web API + SWR.
+- **WakaTime** — coding stats on the dashboard via API routes.
+- **Blog** — WordPress REST API (`BLOG_API_URL`); list uses client-driven fetching, post pages use SSR where configured.
+- **Projects** — Prisma + PostgreSQL; ISR-style revalidation and SSR for detail pages.
+- **GitHub contributions** — GraphQL API with tokens from env (see below), not end-user OAuth.
 
-- ### 🤖 ChatGPT AI (Unavailable)
+<br />
 
-You can access this feature by opening the command palette [cmd+k], then typing whatever you want to search/ask for. (Currently not available, but you can configure it on your machine with your own OpenAI api key)
+## Scripts
 
-- ### 💻 JavaScript Playground
+| Command | Description |
+|---------|-------------|
+| `yarn dev` | Development server |
+| `yarn build` | Production build (runs `next-sitemap` in `postbuild`) |
+| `yarn start` | Serve production build |
+| `yarn lint` | ESLint on `src` (zero warnings) |
+| `yarn lint:fix` | ESLint `--fix` + Prettier |
+| `yarn typecheck` | `tsc --noEmit` |
+| `yarn test` / `yarn test:ci` | Jest |
+| `yarn format` / `yarn format:check` | Prettier |
 
-A no-fuss pure JavaScript playground with a live feedback loop.
+`yarn install` runs **`prisma generate`** via `postinstall` (reads your Prisma schema; no database connection required for that step).
 
-- ### 💬 Realtime Guestbook
+<br />
 
-Realtime guestbook chat is powered by Firebase. Anyone can leave me a message in this website.
+## Getting started
 
-- ### 🎧 Spotify Status
-
-Displays song information being played on spotify in real time using the Spotify API and SWR.
-
-- ### 🕗 Wakatime Statistics
-
-Data is retrieved using the Wakatime API and then displayed on the dashboard, built with Next.js API routes deployed as serverless functions.
-
-- ### 📝 Blogs
-
-The content on this blog is meticulously managed and sourced from a self-hosted headless CMS powered by WordPress, exemplifying our commitment to a streamlined and efficient content delivery system. The data fetching technique used to retrieve articles from WordPress CMS API involves using Client-Side Rendering (CSR) for the blog list and Server-Side Rendering (SSR) for the blog details.
-
-- ### 🗳 Projects
-
-The data projects on this blog are taken from the PostgreSQL database connected through the Prisma Client. The database for this application is hosted on Supabase DB.The data fetching method used to retrieve data projects is Incremental Static Regeneration (ISR) with 1 second revalidation and Server-Side Rendering (SSR) for the project details..
-<br /><br />
-
-## Performance
-
-- ### PageSpeed Insights
-
-Report URL: https://pagespeed.web.dev/analysis/https-aulianza-id/pk0y6xcz25?form_factor=desktop
-
-![image](https://github.com/aulianza/aulianza.id/assets/15605885/d87a6083-caf3-4b84-ba59-975c07193a9f)
-
-- ### GTmetrix
-
-Report URL: [https://pagespeed.web.dev/analysis/https-aulianza-id/pk0y6xcz25?form_factor=desktop](https://gtmetrix.com/reports/aulianza.id/REEiduoo/)
-
-![image](https://github.com/aulianza/aulianza.id/assets/15605885/953dc131-bf52-4ef6-913c-f6eb8fb6c6a7)
-<br /><br />
-
-## Getting Started
-
-If you are interested in running this project on your local machine, you can do so in just 3 easy steps below. Additionally, remember to update the ".env.example" file to ".env" and replace the variables with your own in the ".env" file.
-
-### 1. Clone this template using one of the three ways:
-
-1. Clone using git
-
-   ```bash
-   git clone https://github.com/aulianza/aulianza.id
-   ```
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/aulianza/aulianza.id project-name
-   ```
-
-3. Using `degit`
-
-   ```bash
-   npx degit aulianza/aulianza.id YOUR_APP_NAME
-   ```
-
-4. Deploy to Vercel or Netlify, etc
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/aulianza/aulianza.id)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aulianza/aulianza.id)
-
-### 2. Install dependencies
-
-It is encouraged to use **yarn** so the husky hooks can work properly.
+### 1. Clone and install
 
 ```bash
+git clone <your-repo-url>
+cd my-portfolio
 yarn install
 ```
 
-### 3. Config .env
+Using **Yarn** is recommended so Husky hooks match the project scripts.
 
-This repository uses several environment variables. Please copy .env.example into .env, then fill in the values with your own. For third-party environment variables such as Spotify, Wakatime, Firebase, and others, please refer to the official documentation provided by each provider.
+### 2. Environment variables
 
-```
+Copy `.env.example` to `.env` and fill in values. Third-party keys follow each provider’s docs (Spotify, WakaTime, Firebase, WordPress API base URL, etc.).
+
+```env
 BUNDLE_ANALYZER=false
-SITE_URL=https://aulianza.id
+SITE_URL=https://luisrojascr.netlify.app
 
-# Blog
+# Blog (WordPress REST API base)
 BLOG_API_URL=
 
-# OpenAI
+# OpenAI (optional — command palette)
 OPENAI_API_KEY=
 
-# DEV.to
+# DEV.to (optional)
 DEVTO_KEY=
 
 # Spotify
@@ -157,17 +102,17 @@ SPOTIFY_REFRESH_TOKEN=
 # WakaTime
 WAKATIME_API_KEY=
 
-# GitHub
+# GitHub GraphQL (read-only tokens for contribution graph — not OAuth login)
 GITHUB_READ_USER_TOKEN_PERSONAL=
 GITHUB_READ_USER_TOKEN_WORK=
 
-# Prisma Database
+# Prisma / PostgreSQL
 DATABASE_URL='postgres://USER:PASSWORD@HOST:5432/postgres'
 
-# Contact Form
+# Contact form (e.g. Web3Forms)
 CONTACT_FORM_API_KEY=
 
-# Firebase
+# Firebase (guestbook)
 NEXT_PUBLIC_FIREBASE_API_KEY=
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
 NEXT_PUBLIC_FIREBASE_DB_URL=
@@ -179,17 +124,29 @@ NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
 NEXT_PUBLIC_FIREBASE_CHAT_DB=
 ```
 
-### 4. Run the development server
-
-You can start the server using this command:
+### 3. Run the dev server
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
-<br /><br />
+Open [http://localhost:3000](http://localhost:3000). Main entry: `src/pages/index.tsx`.
+
+<br />
+
+## Deployment notes
+
+- Set the same env vars on your host (e.g. Vercel, Netlify).
+- `SITE_URL` should match your public URL for SEO/sitemap (`next-sitemap`).
+
+<br />
+
+## Performance
+
+Run **Lighthouse** or [PageSpeed Insights](https://pagespeed.web.dev/) against your **production** URL after deploy; scores depend on hosting, assets, and third-party APIs.
+
+<br />
 
 ## License
 
-Licensed under the [GPL-3.0 license](https://github.com/aulianza/aulianza.id/blob/master/LICENSE).
+Licensed under the [GNU General Public License v3.0](LICENSE).
